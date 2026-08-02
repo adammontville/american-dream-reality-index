@@ -1,6 +1,6 @@
 {
-  "methodology_version": "0.1.0",
-  "generated_at": "2026-08-02T21:08:45Z",
+  "methodology_version": "0.1.1",
+  "generated_at": "2026-08-02T21:11:37Z",
   "notes": "ADRI (American Dream Reality Index) v0.1. See docs/METHODOLOGY.md for indicator definitions, anchors, normalization, and weighting. Confidence is a coarse freshness heuristic; see docs/NOTES.md \u00a76.6.",
   "domain_weights": {
     "Education": 0.2,

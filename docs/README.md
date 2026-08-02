@@ -134,12 +134,11 @@ The CDC Socrata endpoint (indicator 3) needs no key. Indicators 1, 4, 6, 9, and 
 
 ## Deviations from the methodology, flagged for review
 
-Thread 2 kept implementation aligned with `METHODOLOGY.md` and `NOTES.md` throughout, with two documented deviations that are explicit in code comments:
+Thread 2 kept implementation aligned with `METHODOLOGY.md` and `NOTES.md` throughout. One deviation remains open:
 
-1. **Presidential-only VEP turnout with a 4-year carry-forward.** METHODOLOGY.md §5.2 sets a general "at most one reference year" carry-forward rule. Applied literally, a presidential-only VEP indicator disappears from every non-election year and the Civic domain collapses, forcing years 2010–2011, 2014–2015, 2018–2019, and 2022–2023 out of publication. NOTES.md §6.3 explicitly leans toward presidential-only turnout for v0.1 and calls this "revisit in Thread 2." The pipeline resolves the contradiction by carrying VEP forward across the full four-year presidential cycle, with every non-presidential year annotated in the ADRI record. Every biennial indicator (NAEP) is allowed at most one gap-plus-grace year, consistent with §5.2.
-2. **Publication threshold.** The pipeline suppresses reference years where fewer than six of the ten indicators are present or where any domain has zero components. This is stricter than `METHODOLOGY.md` §5.3 says explicitly, but consistent with its spirit ("the most recent year for which every indicator has at least a provisional-or-better vintage"). The threshold is a constant (`MIN_INDICATOR_COVERAGE` in `scripts/compute_index.py`) so it can be tuned when Thread 3 or a v0.2 methodology bump revisits publication rules.
+1. **Presidential-only VEP turnout with a 4-year carry-forward.** METHODOLOGY.md §5.2 sets a general "at most one reference year" carry-forward rule. Applied literally, a presidential-only VEP indicator disappears from every non-election year and the Civic domain collapses, forcing years 2010–2011, 2014–2015, 2018–2019, and 2022–2023 out of publication. NOTES.md §6.3 explicitly leans toward presidential-only turnout for v0.1 and calls this "revisit in Thread 2." The pipeline resolves the contradiction by carrying VEP forward across the full four-year presidential cycle, with every non-presidential year annotated in the ADRI record. Every biennial indicator (NAEP) is allowed at most one gap-plus-grace year, consistent with §5.2. This deviation will be reconciled in a later revision, either by adding an explicit VEP exception to §5.2 (MINOR bump) or by adding a second civic indicator so VEP no longer needs a long carry-forward (MAJOR bump).
 
-Both deviations are candidates for tightening once the methodology is next revised.
+One earlier deviation — the 6/10 publication threshold in `scripts/compute_index.py` — was written into METHODOLOGY.md §5.3.1 in v0.1.1 and is no longer a deviation.
 
 ## Naming note
 

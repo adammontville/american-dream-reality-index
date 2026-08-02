@@ -27,7 +27,7 @@ DOCS_DIR = REPO_ROOT / "docs"
 # Methodology version pin (see METHODOLOGY.md §6.2)
 # ---------------------------------------------------------------------------
 
-METHODOLOGY_VERSION = "0.1.0"
+METHODOLOGY_VERSION = "0.1.1"
 
 # ---------------------------------------------------------------------------
 # Indicator definitions

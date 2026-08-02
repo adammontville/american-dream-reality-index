@@ -1,7 +1,7 @@
 # American Dream Reality Index — Methodology
 
-**Version:** 0.1 (design draft, methodology-only, no computed values)
-**Status:** Design frozen for Thread 1. Retrieval, computation, and site code are deferred to Thread 2.
+**Version:** 0.1.1
+**Status:** Design finalized; pipeline and static site implemented.
 **Last updated:** 2026-08-02
 
 ---
@@ -118,7 +118,7 @@ Anchor revisions are versioned. A change to any anchor is a major-version bump (
 ### 5.2 Outliers and missing values
 
 - **Outliers:** the clip to [0, 100] is the only outlier treatment. No winsorization, no trimming.
-- **Missing values:** if an indicator has no vintage for the target reference year, the index carries forward the most recent prior value **for at most one reference year**, with the ADRI record annotated `carried_forward: <indicator>`. If a second consecutive year is missing, the domain-score aggregation (§5.3) omits that indicator and the omission is annotated. The composite formula (§5.4) handles this by renormalizing weights within the affected domain.
+- **Missing values:** if an indicator has no vintage for the target reference year, the index carries forward the most recent prior value **for at most one reference year**, with the ADRI record annotated `carried_forward: <indicator>`. If a second consecutive year is missing, the domain-score aggregation (§5.4) omits that indicator and the omission is annotated. The composite formula (§5.4) handles this by renormalizing weights within the affected domain.
 - **Definitional breaks:** documented per-indicator (§7.4). No mechanical adjustment; each break is annotated in the time series and — where appropriate — a re-computed pre-break series is published alongside.
 
 ### 5.3 Aligning frequencies to an annual reference year
@@ -130,6 +130,23 @@ The composite is computed **once per calendar year**, with the *reference year* 
 - **Biennial indicators** (1 NAEP, 9 VEP turnout): use the most recent published biennial value at the time of the composite. Between biennial releases, the value is carried forward but the ADRI record annotates the vintage year on the indicator.
 
 Because most inputs lag by 6–18 months, the ADRI for calendar year *t* is expected to be publishable in **Q4 of year *t*+1** at the earliest, and possibly year *t*+2 if BJS or NVSS is late.
+
+The strict form of this rule — every indicator present with at least a provisional-or-better vintage — is the ideal. In practice, the historical series and any reference year may have gaps. §5.3.1 defines the minimum coverage a reference year must meet to be published.
+
+### 5.3.1 Publication threshold
+
+A reference year is **published** in the ADRI time series only if it meets **both** of the following coverage tests:
+
+1. **Indicator coverage.** At least **6 of the 10 indicators** must have a value for the reference year, either from a direct vintage or from a carry-forward permitted by §5.2.
+2. **Domain coverage.** Every one of the six domains must have at least one indicator with a value after carry-forward. If any domain has zero available indicators, the reference year is suppressed even if the indicator-count test passes.
+
+When a reference year fails either test, the pipeline still computes its component scores internally, but the row is **omitted from the published time series** and logged with the reason. The row may be re-included in a later release once additional vintages become available (see §6.3 on source revisions).
+
+The indicator-coverage threshold is exposed in code as the constant `MIN_INDICATOR_COVERAGE = 0.6` in `scripts/compute_index.py` so it can be tuned in a MAJOR version bump (§6.2) without further methodology changes. The domain-coverage test is not tunable.
+
+**Rationale.** The 6/10 floor is a compromise between two failure modes. Requiring all 10 indicators (the strictest reading of §5.3) would suppress most pre-2010 reference years given the current indicator set and would give away legitimate signal in years where only a slow source (BJS, NAEP) is late. Publishing years with 1–2 indicators would produce a composite that is really a report on whichever indicators happened to arrive, with a confidence score too low to be useful. 6/10 with all six domains present is the point at which the composite still exercises every domain weight and every carry-forward is bounded.
+
+Each published record also carries a **confidence** field (0–1) equal to the fraction of the 10 indicators that were directly measured for that reference year (i.e., not carried forward). Readers should treat records with confidence below ~0.7 with proportional skepticism.
 
 ### 5.4 Composite formula
 
@@ -279,4 +296,5 @@ Full source URLs, access notes, and vintage tracking are maintained in `../data/
 
 ## Appendix B — Change log
 
+- **v0.1.1 (2026-08-02)** — MINOR. Added §5.3.1 formalizing the publication threshold used by the reference implementation (indicator coverage ≥ 6/10 and all six domains represented after carry-forward). Corrected a stale cross-reference in §5.2 (domain aggregation is defined in §5.4, not §5.3). One methodology↔implementation gap remains open and is not resolved in this revision: the reference implementation carries the VEP indicator forward for up to four years (a presidential cycle) rather than the one year permitted by §5.2. This will be reconciled in a later revision, either by adding an explicit exception here (MINOR) or by adding a second civic indicator so VEP no longer needs a long carry-forward (MAJOR).
 - **v0.1 (2026-08-02)** — Initial design draft. Indicator set frozen at 10 across six domains. Fixed-anchor min-max normalization, equal-within-domain aggregation, fixed domain weights (0.20/0.20/0.20/0.15/0.10/0.15). No computed values yet.

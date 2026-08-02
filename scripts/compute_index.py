@@ -158,15 +158,14 @@ def _all_reference_years(processed: dict[str, dict]) -> list[int]:
     return sorted(years)
 
 
-# A reference year is only published if it clears this minimum coverage bar.
-# See METHODOLOGY.md §5.3: the reference year is the most recent year for
-# which every indicator has a provisional-or-better vintage. We can't
-# enforce "every indicator" strictly (biennial gaps, real-world missing
-# data), so v0.1 requires every domain to have at least one component and
-# the overall coverage to be at least this threshold. Years below the bar
-# are computed internally but suppressed from the published time series so
-# the site does not surface composites built from one or two indicators.
-MIN_INDICATOR_COVERAGE = 0.6  # 6 of 10 indicators must be present or carried
+# Publication threshold. See METHODOLOGY.md §5.3.1: a reference year is
+# published only when at least 6 of 10 indicators have a value (directly or
+# via carry-forward) and every one of the six domains has at least one
+# component. Years that fail either test are computed internally but
+# suppressed from the published time series. The domain-coverage test is
+# enforced unconditionally below; the indicator-coverage test is tunable
+# through this constant. Changing this value is a MAJOR bump per §6.2.
+MIN_INDICATOR_COVERAGE = 0.6
 
 
 def _compute_one_year(
