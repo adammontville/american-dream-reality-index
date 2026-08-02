@@ -1,0 +1,21 @@
+# indicator: Life expectancy at birth (years)
+# source: CDC / NCHS, National Vital Statistics System.
+#         Socrata dataset: https://data.cdc.gov/api/views/w9j2-ggv5
+# vintage: 2026-08-02 (through 2023 final; 2024 provisional not used)
+# note: total population, both sexes, all races. Final NVSS figures only;
+#       provisional data are ignored per METHODOLOGY.md indicator #3.
+year,value
+2000,76.8
+2005,77.4
+2010,78.7
+2013,78.8
+2014,78.9
+2015,78.7
+2016,78.6
+2017,78.6
+2018,78.7
+2019,78.8
+2020,77.0
+2021,76.4
+2022,77.5
+2023,78.4

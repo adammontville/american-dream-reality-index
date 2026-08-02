@@ -1,0 +1,1584 @@
+{
+  "methodology_version": "0.1.0",
+  "generated_at": "2026-08-02T21:00:56Z",
+  "notes": "ADRI (American Dream Reality Index) v0.1. See docs/METHODOLOGY.md for indicator definitions, anchors, normalization, and weighting. Confidence is a coarse freshness heuristic; see docs/NOTES.md \u00a76.6.",
+  "domain_weights": {
+    "Education": 0.2,
+    "Health": 0.2,
+    "Prosperity": 0.2,
+    "Opportunity": 0.15,
+    "Civic": 0.1,
+    "Safety": 0.15
+  },
+  "indicators": [
+    {
+      "id": "naep_g8_composite",
+      "name": "NAEP grade-8 math + reading composite",
+      "domain": "Education",
+      "direction": 1,
+      "unit": "scale-score average (math+reading, grade 8)",
+      "frequency": "biennial",
+      "anchor_low": 250.0,
+      "anchor_high": 290.0,
+      "source": "https://www.nationsreportcard.gov/DataService/GetAdhocData.aspx"
+    },
+    {
+      "id": "bachelors_attainment_25plus",
+      "name": "Bachelor's degree attainment, age 25+",
+      "domain": "Education",
+      "direction": 1,
+      "unit": "percent of population 25+",
+      "frequency": "annual",
+      "anchor_low": 20.0,
+      "anchor_high": 45.0,
+      "source": "https://api.census.gov/data/2024/acs/acs1/subject"
+    },
+    {
+      "id": "life_expectancy_at_birth",
+      "name": "Life expectancy at birth",
+      "domain": "Health",
+      "direction": 1,
+      "unit": "years",
+      "frequency": "annual",
+      "anchor_low": 74.0,
+      "anchor_high": 84.0,
+      "source": "https://data.cdc.gov/api/views/w9j2-ggv5/rows.csv"
+    },
+    {
+      "id": "overdose_mortality_age_adjusted",
+      "name": "Drug overdose mortality, age-adjusted",
+      "domain": "Health",
+      "direction": -1,
+      "unit": "deaths per 100,000, age-adjusted",
+      "frequency": "annual",
+      "anchor_low": 4.0,
+      "anchor_high": 35.0,
+      "source": "https://wonder.cdc.gov/wonder/help/wonder-api.html"
+    },
+    {
+      "id": "real_median_household_income",
+      "name": "Real median household income",
+      "domain": "Prosperity",
+      "direction": 1,
+      "unit": "real dollars",
+      "frequency": "annual",
+      "anchor_low": 55000.0,
+      "anchor_high": 90000.0,
+      "source": "https://fred.stlouisfed.org/series/MEHOINUSA672N"
+    },
+    {
+      "id": "supplemental_poverty_rate",
+      "name": "Supplemental Poverty Measure rate",
+      "domain": "Prosperity",
+      "direction": -1,
+      "unit": "percent",
+      "frequency": "annual",
+      "anchor_low": 6.0,
+      "anchor_high": 18.0,
+      "source": "https://www2.census.gov/programs-surveys/supplemental-poverty-measure/datasets/spm/"
+    },
+    {
+      "id": "prime_age_epop",
+      "name": "Prime-age (25\u201354) employment-to-population ratio",
+      "domain": "Prosperity",
+      "direction": 1,
+      "unit": "percent",
+      "frequency": "monthly",
+      "anchor_low": 70.0,
+      "anchor_high": 82.0,
+      "source": "https://fred.stlouisfed.org/series/LNS12300060"
+    },
+    {
+      "id": "gini_household_income",
+      "name": "Gini index of household income",
+      "domain": "Opportunity",
+      "direction": -1,
+      "unit": "Gini coefficient (0\u20131)",
+      "frequency": "annual",
+      "anchor_low": 0.35,
+      "anchor_high": 0.5,
+      "source": "https://api.census.gov/data/2024/acs/acs1"
+    },
+    {
+      "id": "vep_turnout",
+      "name": "Voter turnout of voting-eligible population (presidential)",
+      "domain": "Civic",
+      "direction": 1,
+      "unit": "percent (presidential-year VEP)",
+      "frequency": "biennial",
+      "anchor_low": 50.0,
+      "anchor_high": 75.0,
+      "source": "https://election.lab.ufl.edu/data-downloads/turnoutdata/"
+    },
+    {
+      "id": "incarceration_rate_per_100k",
+      "name": "Total incarceration rate per 100,000",
+      "domain": "Safety",
+      "direction": -1,
+      "unit": "persons per 100,000 residents",
+      "frequency": "annual",
+      "anchor_low": 150.0,
+      "anchor_high": 750.0,
+      "source": "https://bjs.ojp.gov/"
+    }
+  ],
+  "series": [
+    {
+      "year": 2010,
+      "adri": 35.45,
+      "adri_equal_weight": 34.39,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 44.52,
+        "Health": 60.11,
+        "Prosperity": 31.69,
+        "Opportunity": 20.27,
+        "Civic": 46.4,
+        "Safety": 3.33
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 272.5,
+          "raw_vintage_year": 2009,
+          "normalized": 56.25,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 28.2,
+          "raw_vintage_year": 2010,
+          "normalized": 32.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.7,
+          "raw_vintage_year": 2010,
+          "normalized": 47.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 12.3,
+          "raw_vintage_year": 2010,
+          "normalized": 73.226,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 68440.0,
+          "raw_vintage_year": 2010,
+          "normalized": 38.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 16.0,
+          "raw_vintage_year": 2010,
+          "normalized": 16.667,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 74.8,
+          "raw_vintage_year": 2010,
+          "normalized": 40.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4696,
+          "raw_vintage_year": 2010,
+          "normalized": 20.267,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 61.6,
+          "raw_vintage_year": 2008,
+          "normalized": 46.4,
+          "carried_forward": true,
+          "carry_forward_years": 2
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 730.0,
+          "raw_vintage_year": 2010,
+          "normalized": 3.333,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2009)",
+        "carried_forward: vep_turnout (biennial; last vintage 2008)"
+      ]
+    },
+    {
+      "year": 2011,
+      "adri": 35.42,
+      "adri_equal_weight": 34.3,
+      "confidence": 0.6,
+      "domain_scores": {
+        "Education": 46.38,
+        "Health": 58.66,
+        "Prosperity": 32.24,
+        "Opportunity": 18.8,
+        "Civic": 46.4,
+        "Safety": 3.33
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 273.5,
+          "raw_vintage_year": 2011,
+          "normalized": 58.75,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 28.5,
+          "raw_vintage_year": 2011,
+          "normalized": 34.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.7,
+          "raw_vintage_year": 2010,
+          "normalized": 47.0,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 13.2,
+          "raw_vintage_year": 2011,
+          "normalized": 70.323,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 68440.0,
+          "raw_vintage_year": 2010,
+          "normalized": 38.4,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "supplemental_poverty_rate": {
+          "raw": 16.1,
+          "raw_vintage_year": 2011,
+          "normalized": 15.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 75.1,
+          "raw_vintage_year": 2011,
+          "normalized": 42.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4718,
+          "raw_vintage_year": 2011,
+          "normalized": 18.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 61.6,
+          "raw_vintage_year": 2008,
+          "normalized": 46.4,
+          "carried_forward": true,
+          "carry_forward_years": 3
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 730.0,
+          "raw_vintage_year": 2010,
+          "normalized": 3.333,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        }
+      },
+      "annotations": [
+        "carried_forward: life_expectancy_at_birth (annual; last vintage 2010)",
+        "carried_forward: real_median_household_income (annual; last vintage 2010)",
+        "carried_forward: vep_turnout (biennial; last vintage 2008)",
+        "carried_forward: incarceration_rate_per_100k (annual; last vintage 2010)"
+      ]
+    },
+    {
+      "year": 2012,
+      "adri": 36.95,
+      "adri_equal_weight": 34.61,
+      "confidence": 0.7,
+      "domain_scores": {
+        "Education": 47.58,
+        "Health": 70.65,
+        "Prosperity": 32.08,
+        "Opportunity": 15.8,
+        "Civic": 34.4,
+        "Safety": 7.17
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 273.5,
+          "raw_vintage_year": 2011,
+          "normalized": 58.75,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 29.1,
+          "raw_vintage_year": 2012,
+          "normalized": 36.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 13.1,
+          "raw_vintage_year": 2012,
+          "normalized": 70.645,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 16.0,
+          "raw_vintage_year": 2012,
+          "normalized": 16.667,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 75.7,
+          "raw_vintage_year": 2012,
+          "normalized": 47.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4763,
+          "raw_vintage_year": 2012,
+          "normalized": 15.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 58.6,
+          "raw_vintage_year": 2012,
+          "normalized": 34.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 707.0,
+          "raw_vintage_year": 2012,
+          "normalized": 7.167,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2011)",
+        "missing: life_expectancy_at_birth",
+        "missing: real_median_household_income"
+      ]
+    },
+    {
+      "year": 2013,
+      "adri": 35.54,
+      "adri_equal_weight": 33.31,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 50.45,
+        "Health": 58.19,
+        "Prosperity": 36.86,
+        "Opportunity": 12.8,
+        "Civic": 34.4,
+        "Safety": 7.17
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 275.0,
+          "raw_vintage_year": 2013,
+          "normalized": 62.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 29.6,
+          "raw_vintage_year": 2013,
+          "normalized": 38.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.8,
+          "raw_vintage_year": 2013,
+          "normalized": 48.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 13.8,
+          "raw_vintage_year": 2013,
+          "normalized": 68.387,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 68910.0,
+          "raw_vintage_year": 2013,
+          "normalized": 39.743,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 15.5,
+          "raw_vintage_year": 2013,
+          "normalized": 20.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 76.0,
+          "raw_vintage_year": 2013,
+          "normalized": 50.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4808,
+          "raw_vintage_year": 2013,
+          "normalized": 12.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 58.6,
+          "raw_vintage_year": 2012,
+          "normalized": 34.4,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 707.0,
+          "raw_vintage_year": 2012,
+          "normalized": 7.167,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        }
+      },
+      "annotations": [
+        "carried_forward: vep_turnout (biennial; last vintage 2012)",
+        "carried_forward: incarceration_rate_per_100k (annual; last vintage 2012)"
+      ]
+    },
+    {
+      "year": 2014,
+      "adri": 36.62,
+      "adri_equal_weight": 34.35,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 51.45,
+        "Health": 57.24,
+        "Prosperity": 39.86,
+        "Opportunity": 13.13,
+        "Civic": 34.4,
+        "Safety": 10.0
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 275.0,
+          "raw_vintage_year": 2013,
+          "normalized": 62.5,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 30.1,
+          "raw_vintage_year": 2014,
+          "normalized": 40.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.9,
+          "raw_vintage_year": 2014,
+          "normalized": 49.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 14.7,
+          "raw_vintage_year": 2014,
+          "normalized": 65.484,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 69440.0,
+          "raw_vintage_year": 2014,
+          "normalized": 41.257,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 15.3,
+          "raw_vintage_year": 2014,
+          "normalized": 22.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 76.7,
+          "raw_vintage_year": 2014,
+          "normalized": 55.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4803,
+          "raw_vintage_year": 2014,
+          "normalized": 13.133,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 58.6,
+          "raw_vintage_year": 2012,
+          "normalized": 34.4,
+          "carried_forward": true,
+          "carry_forward_years": 2
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 690.0,
+          "raw_vintage_year": 2014,
+          "normalized": 10.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2013)",
+        "carried_forward: vep_turnout (biennial; last vintage 2012)"
+      ]
+    },
+    {
+      "year": 2015,
+      "adri": 36.78,
+      "adri_equal_weight": 34.5,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 48.7,
+        "Health": 53.66,
+        "Prosperity": 46.53,
+        "Opportunity": 13.73,
+        "Civic": 34.4,
+        "Safety": 10.0
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 272.0,
+          "raw_vintage_year": 2015,
+          "normalized": 55.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 30.6,
+          "raw_vintage_year": 2015,
+          "normalized": 42.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.7,
+          "raw_vintage_year": 2015,
+          "normalized": 47.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 16.3,
+          "raw_vintage_year": 2015,
+          "normalized": 60.323,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 72360.0,
+          "raw_vintage_year": 2015,
+          "normalized": 49.6,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 14.5,
+          "raw_vintage_year": 2015,
+          "normalized": 29.167,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 77.3,
+          "raw_vintage_year": 2015,
+          "normalized": 60.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4794,
+          "raw_vintage_year": 2015,
+          "normalized": 13.733,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 58.6,
+          "raw_vintage_year": 2012,
+          "normalized": 34.4,
+          "carried_forward": true,
+          "carry_forward_years": 3
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 690.0,
+          "raw_vintage_year": 2014,
+          "normalized": 10.0,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        }
+      },
+      "annotations": [
+        "carried_forward: vep_turnout (biennial; last vintage 2012)",
+        "carried_forward: incarceration_rate_per_100k (annual; last vintage 2014)"
+      ]
+    },
+    {
+      "year": 2016,
+      "adri": 38.11,
+      "adri_equal_weight": 36.28,
+      "confidence": 0.9,
+      "domain_scores": {
+        "Education": 50.1,
+        "Health": 47.52,
+        "Prosperity": 51.88,
+        "Opportunity": 12.8,
+        "Civic": 40.4,
+        "Safety": 15.0
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 272.0,
+          "raw_vintage_year": 2015,
+          "normalized": 55.0,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 31.3,
+          "raw_vintage_year": 2016,
+          "normalized": 45.2,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.6,
+          "raw_vintage_year": 2016,
+          "normalized": 46.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 19.8,
+          "raw_vintage_year": 2016,
+          "normalized": 49.032,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 74180.0,
+          "raw_vintage_year": 2016,
+          "normalized": 54.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 13.9,
+          "raw_vintage_year": 2016,
+          "normalized": 34.167,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 78.0,
+          "raw_vintage_year": 2016,
+          "normalized": 66.667,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4808,
+          "raw_vintage_year": 2016,
+          "normalized": 12.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 60.1,
+          "raw_vintage_year": 2016,
+          "normalized": 40.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 660.0,
+          "raw_vintage_year": 2016,
+          "normalized": 15.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2015)"
+      ]
+    },
+    {
+      "year": 2017,
+      "adri": 37.96,
+      "adri_equal_weight": 36.14,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 50.25,
+        "Health": 44.45,
+        "Prosperity": 54.47,
+        "Opportunity": 12.27,
+        "Civic": 40.4,
+        "Safety": 15.0
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 271.0,
+          "raw_vintage_year": 2017,
+          "normalized": 52.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 32.0,
+          "raw_vintage_year": 2017,
+          "normalized": 48.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.6,
+          "raw_vintage_year": 2017,
+          "normalized": 46.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 21.7,
+          "raw_vintage_year": 2017,
+          "normalized": 42.903,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 75150.0,
+          "raw_vintage_year": 2017,
+          "normalized": 57.571,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 13.9,
+          "raw_vintage_year": 2017,
+          "normalized": 34.167,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 78.6,
+          "raw_vintage_year": 2017,
+          "normalized": 71.667,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4816,
+          "raw_vintage_year": 2017,
+          "normalized": 12.267,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 60.1,
+          "raw_vintage_year": 2016,
+          "normalized": 40.4,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 660.0,
+          "raw_vintage_year": 2016,
+          "normalized": 15.0,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        }
+      },
+      "annotations": [
+        "carried_forward: vep_turnout (biennial; last vintage 2016)",
+        "carried_forward: incarceration_rate_per_100k (annual; last vintage 2016)"
+      ]
+    },
+    {
+      "year": 2018,
+      "adri": 39.78,
+      "adri_equal_weight": 37.7,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 51.45,
+        "Health": 46.56,
+        "Prosperity": 59.24,
+        "Opportunity": 9.73,
+        "Civic": 40.4,
+        "Safety": 18.83
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 271.0,
+          "raw_vintage_year": 2017,
+          "normalized": 52.5,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 32.6,
+          "raw_vintage_year": 2018,
+          "normalized": 50.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.7,
+          "raw_vintage_year": 2018,
+          "normalized": 47.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 20.7,
+          "raw_vintage_year": 2018,
+          "normalized": 46.129,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 75790.0,
+          "raw_vintage_year": 2018,
+          "normalized": 59.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 13.1,
+          "raw_vintage_year": 2018,
+          "normalized": 40.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 79.3,
+          "raw_vintage_year": 2018,
+          "normalized": 77.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4854,
+          "raw_vintage_year": 2018,
+          "normalized": 9.733,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 60.1,
+          "raw_vintage_year": 2016,
+          "normalized": 40.4,
+          "carried_forward": true,
+          "carry_forward_years": 2
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 637.0,
+          "raw_vintage_year": 2018,
+          "normalized": 18.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2017)",
+        "carried_forward: vep_turnout (biennial; last vintage 2016)"
+      ]
+    },
+    {
+      "year": 2019,
+      "adri": 42.06,
+      "adri_equal_weight": 39.73,
+      "confidence": 0.9,
+      "domain_scores": {
+        "Education": 50.58,
+        "Health": 45.61,
+        "Prosperity": 70.24,
+        "Opportunity": 10.73,
+        "Civic": 40.4,
+        "Safety": 20.83
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 269.5,
+          "raw_vintage_year": 2019,
+          "normalized": 48.75,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 33.1,
+          "raw_vintage_year": 2019,
+          "normalized": 52.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.8,
+          "raw_vintage_year": 2019,
+          "normalized": 48.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 21.6,
+          "raw_vintage_year": 2019,
+          "normalized": 43.226,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 81210.0,
+          "raw_vintage_year": 2019,
+          "normalized": 74.886,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 11.7,
+          "raw_vintage_year": 2019,
+          "normalized": 52.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 80.0,
+          "raw_vintage_year": 2019,
+          "normalized": 83.333,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4839,
+          "raw_vintage_year": 2019,
+          "normalized": 10.733,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 60.1,
+          "raw_vintage_year": 2016,
+          "normalized": 40.4,
+          "carried_forward": true,
+          "carry_forward_years": 3
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 625.0,
+          "raw_vintage_year": 2019,
+          "normalized": 20.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: vep_turnout (biennial; last vintage 2016)"
+      ]
+    },
+    {
+      "year": 2020,
+      "adri": 42.03,
+      "adri_equal_weight": 42.59,
+      "confidence": 0.7,
+      "domain_scores": {
+        "Education": 50.58,
+        "Health": 25.81,
+        "Prosperity": 64.0,
+        "Opportunity": 10.73,
+        "Civic": 66.4,
+        "Safety": 38.0
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 269.5,
+          "raw_vintage_year": 2019,
+          "normalized": 48.75,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 33.1,
+          "raw_vintage_year": 2019,
+          "normalized": 52.4,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "life_expectancy_at_birth": {
+          "raw": 77.0,
+          "raw_vintage_year": 2020,
+          "normalized": 30.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 28.3,
+          "raw_vintage_year": 2020,
+          "normalized": 21.613,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 79320.0,
+          "raw_vintage_year": 2020,
+          "normalized": 69.486,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 9.2,
+          "raw_vintage_year": 2020,
+          "normalized": 73.333,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 75.9,
+          "raw_vintage_year": 2020,
+          "normalized": 49.167,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4839,
+          "raw_vintage_year": 2019,
+          "normalized": 10.733,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "vep_turnout": {
+          "raw": 66.6,
+          "raw_vintage_year": 2020,
+          "normalized": 66.4,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 522.0,
+          "raw_vintage_year": 2020,
+          "normalized": 38.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2019)",
+        "carried_forward: bachelors_attainment_25plus (annual; last vintage 2019)",
+        "carried_forward: gini_household_income (annual; last vintage 2019)"
+      ]
+    },
+    {
+      "year": 2021,
+      "adri": 42.36,
+      "adri_equal_weight": 43.08,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 50.17,
+        "Health": 16.19,
+        "Prosperity": 71.7,
+        "Opportunity": 13.2,
+        "Civic": 66.4,
+        "Safety": 40.83
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 269.5,
+          "raw_vintage_year": 2019,
+          "normalized": 48.75,
+          "carried_forward": true,
+          "carry_forward_years": 2
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 32.9,
+          "raw_vintage_year": 2021,
+          "normalized": 51.6,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 76.4,
+          "raw_vintage_year": 2021,
+          "normalized": 24.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 32.4,
+          "raw_vintage_year": 2021,
+          "normalized": 8.387,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 76330.0,
+          "raw_vintage_year": 2021,
+          "normalized": 60.943,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 7.8,
+          "raw_vintage_year": 2021,
+          "normalized": 85.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 78.3,
+          "raw_vintage_year": 2021,
+          "normalized": 69.167,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4802,
+          "raw_vintage_year": 2021,
+          "normalized": 13.2,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 66.6,
+          "raw_vintage_year": 2020,
+          "normalized": 66.4,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 505.0,
+          "raw_vintage_year": 2021,
+          "normalized": 40.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2019)",
+        "carried_forward: vep_turnout (biennial; last vintage 2020)"
+      ]
+    },
+    {
+      "year": 2022,
+      "adri": 38.63,
+      "adri_equal_weight": 39.52,
+      "confidence": 0.9,
+      "domain_scores": {
+        "Education": 44.28,
+        "Health": 21.37,
+        "Prosperity": 61.98,
+        "Opportunity": 8.07,
+        "Civic": 66.4,
+        "Safety": 35.0
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 263.5,
+          "raw_vintage_year": 2022,
+          "normalized": 33.75,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 33.7,
+          "raw_vintage_year": 2022,
+          "normalized": 54.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 77.5,
+          "raw_vintage_year": 2022,
+          "normalized": 35.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 32.6,
+          "raw_vintage_year": 2022,
+          "normalized": 7.742,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 74580.0,
+          "raw_vintage_year": 2022,
+          "normalized": 55.943,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 12.4,
+          "raw_vintage_year": 2022,
+          "normalized": 46.667,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 80.0,
+          "raw_vintage_year": 2022,
+          "normalized": 83.333,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4879,
+          "raw_vintage_year": 2022,
+          "normalized": 8.067,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 66.6,
+          "raw_vintage_year": 2020,
+          "normalized": 66.4,
+          "carried_forward": true,
+          "carry_forward_years": 2
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 540.0,
+          "raw_vintage_year": 2022,
+          "normalized": 35.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: vep_turnout (biennial; last vintage 2020)"
+      ]
+    },
+    {
+      "year": 2023,
+      "adri": 42.06,
+      "adri_equal_weight": 42.47,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 46.88,
+        "Health": 27.97,
+        "Prosperity": 68.28,
+        "Opportunity": 12.8,
+        "Civic": 66.4,
+        "Safety": 32.5
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 263.5,
+          "raw_vintage_year": 2022,
+          "normalized": 33.75,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 35.0,
+          "raw_vintage_year": 2023,
+          "normalized": 60.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.4,
+          "raw_vintage_year": 2023,
+          "normalized": 44.0,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 31.3,
+          "raw_vintage_year": 2023,
+          "normalized": 11.935,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 80610.0,
+          "raw_vintage_year": 2023,
+          "normalized": 73.171,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 12.9,
+          "raw_vintage_year": 2023,
+          "normalized": 42.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 80.7,
+          "raw_vintage_year": 2023,
+          "normalized": 89.167,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4808,
+          "raw_vintage_year": 2023,
+          "normalized": 12.8,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 66.6,
+          "raw_vintage_year": 2020,
+          "normalized": 66.4,
+          "carried_forward": true,
+          "carry_forward_years": 3
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 555.0,
+          "raw_vintage_year": 2023,
+          "normalized": 32.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        }
+      },
+      "annotations": [
+        "carried_forward: naep_g8_composite (biennial; last vintage 2022)",
+        "carried_forward: vep_turnout (biennial; last vintage 2020)"
+      ]
+    },
+    {
+      "year": 2024,
+      "adri": 44.16,
+      "adri_equal_weight": 43.32,
+      "confidence": 0.8,
+      "domain_scores": {
+        "Education": 47.05,
+        "Health": 40.23,
+        "Prosperity": 71.81,
+        "Opportunity": 12.73,
+        "Civic": 55.6,
+        "Safety": 32.5
+      },
+      "domain_weights_used": {
+        "Education": 0.2,
+        "Health": 0.2,
+        "Prosperity": 0.2,
+        "Opportunity": 0.15,
+        "Civic": 0.1,
+        "Safety": 0.15
+      },
+      "indicator_scores": {
+        "naep_g8_composite": {
+          "raw": 263.0,
+          "raw_vintage_year": 2024,
+          "normalized": 32.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "bachelors_attainment_25plus": {
+          "raw": 35.4,
+          "raw_vintage_year": 2024,
+          "normalized": 61.6,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "life_expectancy_at_birth": {
+          "raw": 78.4,
+          "raw_vintage_year": 2023,
+          "normalized": 44.0,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        },
+        "overdose_mortality_age_adjusted": {
+          "raw": 23.7,
+          "raw_vintage_year": 2024,
+          "normalized": 36.452,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "real_median_household_income": {
+          "raw": 83730.0,
+          "raw_vintage_year": 2024,
+          "normalized": 82.086,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "supplemental_poverty_rate": {
+          "raw": 12.9,
+          "raw_vintage_year": 2024,
+          "normalized": 42.5,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "prime_age_epop": {
+          "raw": 80.9,
+          "raw_vintage_year": 2024,
+          "normalized": 90.833,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "gini_household_income": {
+          "raw": 0.4809,
+          "raw_vintage_year": 2024,
+          "normalized": 12.733,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "vep_turnout": {
+          "raw": 63.9,
+          "raw_vintage_year": 2024,
+          "normalized": 55.6,
+          "carried_forward": false,
+          "carry_forward_years": 0
+        },
+        "incarceration_rate_per_100k": {
+          "raw": 555.0,
+          "raw_vintage_year": 2023,
+          "normalized": 32.5,
+          "carried_forward": true,
+          "carry_forward_years": 1
+        }
+      },
+      "annotations": [
+        "carried_forward: life_expectancy_at_birth (annual; last vintage 2023)",
+        "carried_forward: incarceration_rate_per_100k (annual; last vintage 2023)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# indicator: Total incarceration rate per 100,000 (prisons + jails combined)
+# source: U.S. Bureau of Justice Statistics.
+#         Prisoners series: https://bjs.ojp.gov/library/publications/prisoners-2023-statistical-tables
+#         Jails series: https://bjs.ojp.gov/library/publications/jails-report-series-2024-preliminary-data-release
+# vintage: 2026-08-02
+# note: sum of prison (yearend) and jail (midyear) totals divided by U.S.
+#       resident population, expressed per 100,000 residents. Excludes
+#       probation and parole populations, per METHODOLOGY.md indicator #10.
+#       Values assembled from BJS statistical tables; PDF is the primary
+#       release form (§4). Fallback source is the NACJD microdata series.
+year,value
+2000,684
+2005,747
+2008,760
+2010,730
+2012,707
+2014,690
+2016,660
+2018,637
+2019,625
+2020,522
+2021,505
+2022,540
+2023,555

@@ -1,0 +1,113 @@
+{
+  "id": "prime_age_epop",
+  "name": "Prime-age (25\u201354) employment-to-population ratio",
+  "domain": "Prosperity",
+  "direction": 1,
+  "unit": "percent",
+  "frequency": "monthly",
+  "source": "https://fred.stlouisfed.org/series/LNS12300060",
+  "anchors": {
+    "low": 70.0,
+    "high": 82.0,
+    "source": "Prime-age EPOP (FRED LNS12300060, annual mean of monthly SA values) has ranged ~74.8 in 2010 to ~80.9 in 2000 and ~80.9 in 2024. L=70 anchors below any modern-series reading; U=82 anchors above historical peaks as a strong-labor-utilization ceiling."
+  },
+  "raw_path": "data/raw/api_cache/prime_age_epop.csv",
+  "vintage_note": "# indicator: Prime-age (25\u201354) employment-to-population ratio (%)\n# source: FRED series LNS12300060 (BLS Current Population Survey, SA).\n#         API: https://api.stlouisfed.org/fred/series/observations\n# vintage: 2026-08-02 (annualized through 2024)\n# note: annual mean of 12 monthly seasonally-adjusted values, per\n#       METHODOLOGY.md \u00a75.3.",
+  "series": [
+    {
+      "year": 2000,
+      "value": 81.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2005,
+      "value": 79.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2007,
+      "value": 79.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2009,
+      "value": 75.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2010,
+      "value": 74.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2011,
+      "value": 75.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2012,
+      "value": 75.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2013,
+      "value": 76.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2014,
+      "value": 76.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2015,
+      "value": 77.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2016,
+      "value": 78.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2017,
+      "value": 78.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2018,
+      "value": 79.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2019,
+      "value": 80.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2020,
+      "value": 75.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2021,
+      "value": 78.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2022,
+      "value": 80.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2023,
+      "value": 80.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2024,
+      "value": 80.9,
+      "carried_forward": false
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "real_median_household_income",
+  "name": "Real median household income",
+  "domain": "Prosperity",
+  "direction": 1,
+  "unit": "real dollars",
+  "frequency": "annual",
+  "source": "https://fred.stlouisfed.org/series/MEHOINUSA672N",
+  "anchors": {
+    "low": 55000.0,
+    "high": 90000.0,
+    "source": "Real median household income (FRED MEHOINUSA672N, 2024 CPI-U-RS dollars) ranged ~$56k in 1994 to ~$83.7k in 2024. L=55000 anchors below the modern-series floor; U=90000 anchors above the 2024 high as a plausible near-term ceiling."
+  },
+  "raw_path": "data/raw/api_cache/real_median_household_income.csv",
+  "vintage_note": "# indicator: Real median household income (2024 CPI-U-RS-adjusted dollars)\n# source: FRED series MEHOINUSA672N (Census CPS ASEC, hosted at FRED).\n#         API: https://api.stlouisfed.org/fred/series/observations\n# vintage: 2026-08-02 (through 2024, released Sep 2025)\n# note: annual real median household income, U.S. total. Deflator seam\n#       (R-CPI-U-RS to C-CPI-U) noted in METHODOLOGY.md \u00a77.4.",
+  "series": [
+    {
+      "year": 2000,
+      "value": 74770.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2005,
+      "value": 72580.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2010,
+      "value": 68440.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2013,
+      "value": 68910.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2014,
+      "value": 69440.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2015,
+      "value": 72360.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2016,
+      "value": 74180.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2017,
+      "value": 75150.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2018,
+      "value": 75790.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2019,
+      "value": 81210.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2020,
+      "value": 79320.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2021,
+      "value": 76330.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2022,
+      "value": 74580.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2023,
+      "value": 80610.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2024,
+      "value": 83730.0,
+      "carried_forward": false
+    }
+  ]
+}

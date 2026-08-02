@@ -1,0 +1,53 @@
+{
+  "id": "vep_turnout",
+  "name": "Voter turnout of voting-eligible population (presidential)",
+  "domain": "Civic",
+  "direction": 1,
+  "unit": "percent (presidential-year VEP)",
+  "frequency": "biennial",
+  "source": "https://election.lab.ufl.edu/data-downloads/turnoutdata/",
+  "anchors": {
+    "low": 50.0,
+    "high": 75.0,
+    "source": "U.S. VEP presidential-year turnout has ranged ~51.7% (1996) to ~66.6% (2020). L=50 anchors below the modern-series low; U=75 anchors above the modern high toward a peer-democracy ceiling. Per NOTES.md \u00a76.3, this v0.1 uses presidential-year turnout carried forward to intervening midterm-only years."
+  },
+  "raw_path": "data/raw/manual/vep_turnout.csv",
+  "vintage_note": "# indicator: Voter turnout, voting-eligible population (presidential-year, %)\n# source: U.S. Elections Project / UF Election Lab.\n#         Data downloads: https://election.lab.ufl.edu/data-downloads/turnoutdata/\n# vintage: 2026-08-02 (through 2024 general)\n# note: presidential-year VEP turnout, national. Per NOTES.md \u00a76.3, midterm\n#       years are handled by carrying forward the most recent presidential\n#       value in the processing step.",
+  "series": [
+    {
+      "year": 2000,
+      "value": 54.2,
+      "carried_forward": false
+    },
+    {
+      "year": 2004,
+      "value": 60.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2008,
+      "value": 61.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2012,
+      "value": 58.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2016,
+      "value": 60.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2020,
+      "value": 66.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2024,
+      "value": 63.9,
+      "carried_forward": false
+    }
+  ]
+}

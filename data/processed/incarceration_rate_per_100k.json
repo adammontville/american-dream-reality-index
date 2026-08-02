@@ -1,0 +1,83 @@
+{
+  "id": "incarceration_rate_per_100k",
+  "name": "Total incarceration rate per 100,000",
+  "domain": "Safety",
+  "direction": -1,
+  "unit": "persons per 100,000 residents",
+  "frequency": "annual",
+  "source": "https://bjs.ojp.gov/",
+  "anchors": {
+    "low": 150.0,
+    "high": 750.0,
+    "source": "Combined prisons+jails per 100k peaked ~1000 in the late 2000s and has fallen to ~530\u2013560 by 2022\u20132023. L=150 anchors near OECD-peer levels (e.g., Western Europe ~100\u2013150); U=750 anchors below the historical U.S. peak so a return to that peak maps clearly toward the low end of the 0\u2013100 score."
+  },
+  "raw_path": "data/raw/manual/incarceration_rate_per_100k.csv",
+  "vintage_note": "# indicator: Total incarceration rate per 100,000 (prisons + jails combined)\n# source: U.S. Bureau of Justice Statistics.\n#         Prisoners series: https://bjs.ojp.gov/library/publications/prisoners-2023-statistical-tables\n#         Jails series: https://bjs.ojp.gov/library/publications/jails-report-series-2024-preliminary-data-release\n# vintage: 2026-08-02\n# note: sum of prison (yearend) and jail (midyear) totals divided by U.S.\n#       resident population, expressed per 100,000 residents. Excludes\n#       probation and parole populations, per METHODOLOGY.md indicator #10.\n#       Values assembled from BJS statistical tables; PDF is the primary\n#       release form (\u00a74). Fallback source is the NACJD microdata series.",
+  "series": [
+    {
+      "year": 2000,
+      "value": 684.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2005,
+      "value": 747.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2008,
+      "value": 760.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2010,
+      "value": 730.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2012,
+      "value": 707.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2014,
+      "value": 690.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2016,
+      "value": 660.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2018,
+      "value": 637.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2019,
+      "value": 625.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2020,
+      "value": 522.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2021,
+      "value": 505.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2022,
+      "value": 540.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2023,
+      "value": 555.0,
+      "carried_forward": false
+    }
+  ]
+}

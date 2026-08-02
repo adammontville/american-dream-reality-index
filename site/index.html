@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>American Dream Reality Index</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>American Dream Reality Index</h1>
+    <p class="tagline">
+      A small, transparent composite of U.S. structural conditions that
+      shape how plausible durable prosperity and mobility are for the
+      median resident.
+    </p>
+    <nav>
+      <a href="methodology.html">Methodology</a>
+      <a href="https://github.com/AdamMontville/american-dream-reality-index">Source</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="latest">
+      <div class="latest-card" id="latest-card">
+        <p class="latest-label">Latest ADRI</p>
+        <p class="latest-value" id="latest-value">—</p>
+        <p class="latest-year" id="latest-year">loading…</p>
+        <p class="latest-trend" id="latest-trend"></p>
+        <p class="latest-equal" id="latest-equal"></p>
+        <p class="latest-confidence" id="latest-confidence"></p>
+      </div>
+      <div class="chart-wrap">
+        <h2>ADRI over time</h2>
+        <div id="chart-container"></div>
+        <p class="chart-caption" id="chart-caption"></p>
+      </div>
+    </section>
+
+    <section class="what">
+      <h2>What this measures</h2>
+      <p>
+        The American Dream Reality Index (ADRI) tracks structural
+        conditions that research links to the plausibility of the
+        American Dream — prosperity and mobility for ordinary people.
+        Higher scores mean conditions are more enabling; lower scores mean
+        they are less. It does not measure individual success or
+        guarantee outcomes.
+      </p>
+      <p>
+        Ten indicators across six domains: Education, Health, Prosperity,
+        Opportunity, Civic, and Safety. Fixed-anchor 0–100 normalization
+        so that a 5-point change means the same thing in 2028 as in 2015.
+        See the
+        <a href="methodology.html">Methodology</a> for the full definition,
+        anchor values, and known limitations.
+      </p>
+    </section>
+
+    <section class="domains">
+      <h2>Latest by domain</h2>
+      <div id="domain-grid" class="domain-grid"></div>
+    </section>
+
+    <section class="caveats">
+      <h2>Read the score carefully</h2>
+      <ul>
+        <li>
+          The ADRI is <strong>backward-looking</strong>. Most inputs lag
+          reality by 12–24 months.
+        </li>
+        <li>
+          It is <strong>national</strong>. It does not describe any state,
+          county, or demographic group.
+        </li>
+        <li>
+          It is a <strong>model, not a probability</strong>. It does not
+          predict what will happen to any individual.
+        </li>
+        <li>
+          Weights are a <strong>design choice</strong>. The equal-weight
+          variant is shown alongside so you can see how sensitive the
+          composite is to that choice.
+        </li>
+      </ul>
+    </section>
+
+    <section class="update-info">
+      <h2>Update cadence</h2>
+      <p>
+        Full pipeline runs once per year, in Q4 of year <em>t</em>+1,
+        after ACS, income/poverty, life expectancy, and overdose figures
+        are all available for reference year <em>t</em>. Between annual
+        runs, only source revisions and biennial refreshes (NAEP, voter
+        turnout) trigger interim updates. See
+        <a href="methodology.html#6-update-cadence-versioning-and-revisions">
+          §6 of the methodology</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footer-meta">Loading metadata…</p>
+    <p>
+      Data files:
+      <a href="assets/adri_timeseries.json">adri_timeseries.json</a>
+      ·
+      <a href="assets/adri_timeseries.csv">adri_timeseries.csv</a>
+    </p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

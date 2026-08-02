@@ -1,0 +1,33 @@
+# indicator: Drug overdose mortality, age-adjusted (deaths per 100,000)
+# source: CDC NCHS, NVSS. See NCHS Data Briefs including DB 457, DB 522, DB 549.
+#         Landing: https://www.cdc.gov/nchs/nvss/drug-overdose-deaths.htm
+# vintage: 2026-08-02 (through final 2024)
+# note: age-adjusted rate for all drug overdose deaths, U.S. total,
+#       ICD-10 underlying-cause codes X40-X44, X60-X64, X85, Y10-Y14.
+year,value
+1999,6.1
+2000,6.2
+2001,6.8
+2002,8.2
+2003,8.9
+2004,9.4
+2005,10.1
+2006,11.5
+2007,11.9
+2008,11.9
+2009,11.9
+2010,12.3
+2011,13.2
+2012,13.1
+2013,13.8
+2014,14.7
+2015,16.3
+2016,19.8
+2017,21.7
+2018,20.7
+2019,21.6
+2020,28.3
+2021,32.4
+2022,32.6
+2023,31.3
+2024,23.7

@@ -1,0 +1,21 @@
+# indicator: Gini index of household income (0–1)
+# source: U.S. Census Bureau, ACS 1-Year Table B19083 (variable B19083_001E).
+#         API: https://api.census.gov/data/YYYY/acs/acs1
+# vintage: 2026-08-02 (through 2024)
+# note: national Gini; 2020 skipped by Census. Refreshed by
+#       scripts/fetch_data.py when CENSUS_API_KEY is set.
+year,value
+2010,0.4696
+2011,0.4718
+2012,0.4763
+2013,0.4808
+2014,0.4803
+2015,0.4794
+2016,0.4808
+2017,0.4816
+2018,0.4854
+2019,0.4839
+2021,0.4802
+2022,0.4879
+2023,0.4808
+2024,0.4809

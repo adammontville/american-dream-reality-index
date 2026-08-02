@@ -1,0 +1,148 @@
+{
+  "id": "overdose_mortality_age_adjusted",
+  "name": "Drug overdose mortality, age-adjusted",
+  "domain": "Health",
+  "direction": -1,
+  "unit": "deaths per 100,000, age-adjusted",
+  "frequency": "annual",
+  "source": "https://wonder.cdc.gov/wonder/help/wonder-api.html",
+  "anchors": {
+    "low": 4.0,
+    "high": 35.0,
+    "source": "Age-adjusted overdose deaths per 100,000 rose from ~4 in 1999 to ~32.6 in 2022 and eased to ~23\u201324 in 2024. L=4 anchors on the 1999 domestic floor (representing a favorable ceiling on the 0\u2013100 score); U=35 anchors above the 2022 peak so a return to peak-crisis conditions maps near 0."
+  },
+  "raw_path": "data/raw/manual/overdose_mortality_age_adjusted.csv",
+  "vintage_note": "# indicator: Drug overdose mortality, age-adjusted (deaths per 100,000)\n# source: CDC NCHS, NVSS. See NCHS Data Briefs including DB 457, DB 522, DB 549.\n#         Landing: https://www.cdc.gov/nchs/nvss/drug-overdose-deaths.htm\n# vintage: 2026-08-02 (through final 2024)\n# note: age-adjusted rate for all drug overdose deaths, U.S. total,\n#       ICD-10 underlying-cause codes X40-X44, X60-X64, X85, Y10-Y14.",
+  "series": [
+    {
+      "year": 1999,
+      "value": 6.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2000,
+      "value": 6.2,
+      "carried_forward": false
+    },
+    {
+      "year": 2001,
+      "value": 6.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2002,
+      "value": 8.2,
+      "carried_forward": false
+    },
+    {
+      "year": 2003,
+      "value": 8.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2004,
+      "value": 9.4,
+      "carried_forward": false
+    },
+    {
+      "year": 2005,
+      "value": 10.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2006,
+      "value": 11.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2007,
+      "value": 11.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2008,
+      "value": 11.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2009,
+      "value": 11.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2010,
+      "value": 12.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2011,
+      "value": 13.2,
+      "carried_forward": false
+    },
+    {
+      "year": 2012,
+      "value": 13.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2013,
+      "value": 13.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2014,
+      "value": 14.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2015,
+      "value": 16.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2016,
+      "value": 19.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2017,
+      "value": 21.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2018,
+      "value": 20.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2019,
+      "value": 21.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2020,
+      "value": 28.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2021,
+      "value": 32.4,
+      "carried_forward": false
+    },
+    {
+      "year": 2022,
+      "value": 32.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2023,
+      "value": 31.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2024,
+      "value": 23.7,
+      "carried_forward": false
+    }
+  ]
+}

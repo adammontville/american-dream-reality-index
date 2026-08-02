@@ -1,0 +1,83 @@
+{
+  "id": "naep_g8_composite",
+  "name": "NAEP grade-8 math + reading composite",
+  "domain": "Education",
+  "direction": 1,
+  "unit": "scale-score average (math+reading, grade 8)",
+  "frequency": "biennial",
+  "source": "https://www.nationsreportcard.gov/DataService/GetAdhocData.aspx",
+  "anchors": {
+    "low": 250.0,
+    "high": 290.0,
+    "source": "Grade-8 NAEP scale scores have historically sat in the 260\u2013285 band on the national assessment. L=250 marks a clearly stressed level below any observed U.S. reading since the current scale; U=290 marks a strong ceiling above historical U.S. highs, consistent with top-performing OECD peer averages when crosswalked."
+  },
+  "raw_path": "data/raw/manual/naep_g8_composite.csv",
+  "vintage_note": "# indicator: NAEP grade-8 math + reading composite (average of scale scores)\n# source: https://www.nationsreportcard.gov/ (NAEP main assessment, National Public, Grade 8)\n# vintage: 2026-08-02 (through 2024 assessment)\n# note: values are the arithmetic mean of grade-8 math and grade-8 reading\n#       national-public scale scores as published in the NAEP Report Card.\n#       Biennial cadence; between-assessment years are handled by the\n#       processing step's carry-forward logic (METHODOLOGY.md \u00a75.3).",
+  "series": [
+    {
+      "year": 2000,
+      "value": 266.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2002,
+      "value": 266.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2003,
+      "value": 267.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2005,
+      "value": 270.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2007,
+      "value": 272.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2009,
+      "value": 272.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2011,
+      "value": 273.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2013,
+      "value": 275.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2015,
+      "value": 272.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2017,
+      "value": 271.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2019,
+      "value": 269.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2022,
+      "value": 263.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2024,
+      "value": 263.0,
+      "carried_forward": false
+    }
+  ]
+}

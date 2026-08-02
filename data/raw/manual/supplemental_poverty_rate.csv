@@ -1,0 +1,25 @@
+# indicator: Supplemental Poverty Measure rate (percent)
+# source: U.S. Census Bureau, Report P60 series (Poverty in the United States).
+#         Landing: https://www.census.gov/topics/income-poverty/data/tables.html
+#         Datasets: https://www2.census.gov/programs-surveys/supplemental-poverty-measure/datasets/spm/
+# vintage: 2026-08-02 (through 2024, Report P60-287)
+# note: national SPM rate, all persons, current-year SPM definition. The
+#       methodology annotates the 2019+ definitional updates and the CPS
+#       ASEC income redesign; no mechanical adjustment is applied.
+year,value
+2009,15.3
+2010,16.0
+2011,16.1
+2012,16.0
+2013,15.5
+2014,15.3
+2015,14.5
+2016,13.9
+2017,13.9
+2018,13.1
+2019,11.7
+2020,9.2
+2021,7.8
+2022,12.4
+2023,12.9
+2024,12.9

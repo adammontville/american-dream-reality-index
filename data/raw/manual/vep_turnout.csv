@@ -1,0 +1,15 @@
+# indicator: Voter turnout, voting-eligible population (presidential-year, %)
+# source: U.S. Elections Project / UF Election Lab.
+#         Data downloads: https://election.lab.ufl.edu/data-downloads/turnoutdata/
+# vintage: 2026-08-02 (through 2024 general)
+# note: presidential-year VEP turnout, national. Per NOTES.md §6.3, midterm
+#       years are handled by carrying forward the most recent presidential
+#       value in the processing step.
+year,value
+2000,54.2
+2004,60.1
+2008,61.6
+2012,58.6
+2016,60.1
+2020,66.6
+2024,63.9

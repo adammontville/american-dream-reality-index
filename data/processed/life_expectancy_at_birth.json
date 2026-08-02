@@ -1,0 +1,88 @@
+{
+  "id": "life_expectancy_at_birth",
+  "name": "Life expectancy at birth",
+  "domain": "Health",
+  "direction": 1,
+  "unit": "years",
+  "frequency": "annual",
+  "source": "https://data.cdc.gov/api/views/w9j2-ggv5/rows.csv",
+  "anchors": {
+    "low": 74.0,
+    "high": 84.0,
+    "source": "U.S. life expectancy at birth dipped to ~76.4 in 2021 and has sat between 76 and 79 since 2000. L=74 anchors below the pandemic trough as a stressed-domestic floor; U=84 anchors near the top-of-OECD ceiling (Japan, Switzerland ~84)."
+  },
+  "raw_path": "data/raw/api_cache/life_expectancy_at_birth.csv",
+  "vintage_note": "# indicator: Life expectancy at birth (years)\n# source: CDC / NCHS, National Vital Statistics System.\n#         Socrata dataset: https://data.cdc.gov/api/views/w9j2-ggv5\n# vintage: 2026-08-02 (through 2023 final; 2024 provisional not used)\n# note: total population, both sexes, all races. Final NVSS figures only;\n#       provisional data are ignored per METHODOLOGY.md indicator #3.",
+  "series": [
+    {
+      "year": 2000,
+      "value": 76.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2005,
+      "value": 77.4,
+      "carried_forward": false
+    },
+    {
+      "year": 2010,
+      "value": 78.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2013,
+      "value": 78.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2014,
+      "value": 78.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2015,
+      "value": 78.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2016,
+      "value": 78.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2017,
+      "value": 78.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2018,
+      "value": 78.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2019,
+      "value": 78.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2020,
+      "value": 77.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2021,
+      "value": 76.4,
+      "carried_forward": false
+    },
+    {
+      "year": 2022,
+      "value": 77.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2023,
+      "value": 78.4,
+      "carried_forward": false
+    }
+  ]
+}

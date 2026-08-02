@@ -1,0 +1,26 @@
+# indicator: Prime-age (25–54) employment-to-population ratio (%)
+# source: FRED series LNS12300060 (BLS Current Population Survey, SA).
+#         API: https://api.stlouisfed.org/fred/series/observations
+# vintage: 2026-08-02 (annualized through 2024)
+# note: annual mean of 12 monthly seasonally-adjusted values, per
+#       METHODOLOGY.md §5.3.
+year,value
+2000,81.5
+2005,79.3
+2007,79.9
+2009,75.3
+2010,74.8
+2011,75.1
+2012,75.7
+2013,76.0
+2014,76.7
+2015,77.3
+2016,78.0
+2017,78.6
+2018,79.3
+2019,80.0
+2020,75.9
+2021,78.3
+2022,80.0
+2023,80.7
+2024,80.9

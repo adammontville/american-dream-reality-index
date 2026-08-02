@@ -1,0 +1,219 @@
+/* American Dream Reality Index — site styles.
+ * Deliberately plain: no CDN, no framework.
+ */
+
+:root {
+  --bg: #fbfaf7;
+  --fg: #1c1e21;
+  --muted: #5e6572;
+  --accent: #2d5a8a;
+  --accent-soft: #d8e4f2;
+  --line: #dcd8d2;
+  --card-bg: #ffffff;
+  --up: #2f7a4d;
+  --down: #a3452c;
+  --flat: #5e6572;
+  --max-width: 68rem;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+body { padding-bottom: 3rem; }
+
+a { color: var(--accent); text-decoration: underline; }
+a:hover { text-decoration: none; }
+
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.site-header h1 {
+  font-size: 2rem;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+.site-header .tagline {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem;
+  max-width: 42rem;
+}
+.site-header nav a {
+  margin-right: 1rem;
+  font-size: 0.95rem;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+section { margin-bottom: 2.75rem; }
+section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.005em;
+}
+
+/* Latest ADRI section */
+.latest {
+  display: grid;
+  grid-template-columns: 18rem 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+@media (max-width: 720px) {
+  .latest { grid-template-columns: 1fr; }
+}
+
+.latest-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+.latest-label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  margin: 0 0 0.25rem;
+}
+.latest-value {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.05;
+  color: var(--accent);
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+.latest-year { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0 0.75rem; }
+.latest-trend { margin: 0.35rem 0; font-size: 0.95rem; }
+.latest-trend.up { color: var(--up); }
+.latest-trend.down { color: var(--down); }
+.latest-trend.flat { color: var(--flat); }
+.latest-equal, .latest-confidence {
+  margin: 0.15rem 0; color: var(--muted); font-size: 0.9rem;
+}
+
+.chart-wrap {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem 1rem 0.75rem;
+}
+#chart-container { width: 100%; }
+#chart-container svg { width: 100%; height: auto; display: block; }
+.chart-caption { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+
+/* Domain grid */
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+}
+.domain-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+}
+.domain-name {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 0.2rem;
+}
+.domain-score {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent);
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+.domain-weight {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin: 0.15rem 0 0;
+}
+
+/* Caveats */
+.caveats ul { padding-left: 1.25rem; }
+.caveats li { margin-bottom: 0.4rem; }
+
+/* Methodology page */
+.prose {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 2rem;
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  letter-spacing: -0.005em;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.prose h1 { font-size: 1.75rem; }
+.prose h2 { font-size: 1.3rem; }
+.prose h3 { font-size: 1.1rem; }
+.prose p, .prose ul, .prose ol, .prose blockquote { margin: 0.6rem 0; }
+.prose blockquote {
+  border-left: 3px solid var(--accent-soft);
+  padding: 0.25rem 0.75rem;
+  color: var(--muted);
+  margin: 0.75rem 0;
+}
+.prose code {
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 0.9em;
+  background: #eeece7;
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+}
+.prose pre {
+  background: #eeece7;
+  padding: 0.75rem;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.prose pre code { background: transparent; padding: 0; }
+.prose hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.prose th, .prose td {
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+.prose th { background: #f2efe9; }
+
+/* Footer */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 0;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.site-footer p { margin: 0.25rem 0; }

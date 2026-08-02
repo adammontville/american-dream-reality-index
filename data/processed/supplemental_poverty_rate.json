@@ -1,0 +1,98 @@
+{
+  "id": "supplemental_poverty_rate",
+  "name": "Supplemental Poverty Measure rate",
+  "domain": "Prosperity",
+  "direction": -1,
+  "unit": "percent",
+  "frequency": "annual",
+  "source": "https://www2.census.gov/programs-surveys/supplemental-poverty-measure/datasets/spm/",
+  "anchors": {
+    "low": 6.0,
+    "high": 18.0,
+    "source": "SPM ranged from ~7.8% in 2021 (with expanded transfers) to ~15\u201316% in the 2010s. L=6 anchors below the modern low; U=18 anchors above the historical modern high."
+  },
+  "raw_path": "data/raw/manual/supplemental_poverty_rate.csv",
+  "vintage_note": "# indicator: Supplemental Poverty Measure rate (percent)\n# source: U.S. Census Bureau, Report P60 series (Poverty in the United States).\n#         Landing: https://www.census.gov/topics/income-poverty/data/tables.html\n#         Datasets: https://www2.census.gov/programs-surveys/supplemental-poverty-measure/datasets/spm/\n# vintage: 2026-08-02 (through 2024, Report P60-287)\n# note: national SPM rate, all persons, current-year SPM definition. The\n#       methodology annotates the 2019+ definitional updates and the CPS\n#       ASEC income redesign; no mechanical adjustment is applied.",
+  "series": [
+    {
+      "year": 2009,
+      "value": 15.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2010,
+      "value": 16.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2011,
+      "value": 16.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2012,
+      "value": 16.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2013,
+      "value": 15.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2014,
+      "value": 15.3,
+      "carried_forward": false
+    },
+    {
+      "year": 2015,
+      "value": 14.5,
+      "carried_forward": false
+    },
+    {
+      "year": 2016,
+      "value": 13.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2017,
+      "value": 13.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2018,
+      "value": 13.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2019,
+      "value": 11.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2020,
+      "value": 9.2,
+      "carried_forward": false
+    },
+    {
+      "year": 2021,
+      "value": 7.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2022,
+      "value": 12.4,
+      "carried_forward": false
+    },
+    {
+      "year": 2023,
+      "value": 12.9,
+      "carried_forward": false
+    },
+    {
+      "year": 2024,
+      "value": 12.9,
+      "carried_forward": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# indicator: NAEP grade-8 math + reading composite (average of scale scores)
+# source: https://www.nationsreportcard.gov/ (NAEP main assessment, National Public, Grade 8)
+# vintage: 2026-08-02 (through 2024 assessment)
+# note: values are the arithmetic mean of grade-8 math and grade-8 reading
+#       national-public scale scores as published in the NAEP Report Card.
+#       Biennial cadence; between-assessment years are handled by the
+#       processing step's carry-forward logic (METHODOLOGY.md §5.3).
+year,value
+2000,266.5
+2002,266.0
+2003,267.0
+2005,270.0
+2007,272.0
+2009,272.5
+2011,273.5
+2013,275.0
+2015,272.0
+2017,271.0
+2019,269.5
+2022,263.5
+2024,263.0
