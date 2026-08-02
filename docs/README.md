@@ -132,13 +132,14 @@ The CDC Socrata endpoint (indicator 3) needs no key. Indicators 1, 4, 6, 9, and 
 - **Thread 2 — Implementation.** Data retrieval, indicator processing, composite computation, static site. ✅
 - **Later** — sensitivity analyses, back-computation of historical values under fixed anchors, optional curated context layer, license + public release.
 
-## Deviations from the methodology, flagged for review
+## Deviations from the methodology
 
-Thread 2 kept implementation aligned with `METHODOLOGY.md` and `NOTES.md` throughout. One deviation remains open:
+As of v0.1.2 there are **no open deviations** between the pipeline and `docs/METHODOLOGY.md`. Two engineering choices that started as deviations were written into the methodology text:
 
-1. **Presidential-only VEP turnout with a 4-year carry-forward.** METHODOLOGY.md §5.2 sets a general "at most one reference year" carry-forward rule. Applied literally, a presidential-only VEP indicator disappears from every non-election year and the Civic domain collapses, forcing years 2010–2011, 2014–2015, 2018–2019, and 2022–2023 out of publication. NOTES.md §6.3 explicitly leans toward presidential-only turnout for v0.1 and calls this "revisit in Thread 2." The pipeline resolves the contradiction by carrying VEP forward across the full four-year presidential cycle, with every non-presidential year annotated in the ADRI record. Every biennial indicator (NAEP) is allowed at most one gap-plus-grace year, consistent with §5.2. This deviation will be reconciled in a later revision, either by adding an explicit VEP exception to §5.2 (MINOR bump) or by adding a second civic indicator so VEP no longer needs a long carry-forward (MAJOR bump).
+- The 6/10 publication threshold (`MIN_INDICATOR_COVERAGE = 0.6` in `scripts/compute_index.py`) is now specified in METHODOLOGY.md §5.3.1 (v0.1.1).
+- The VEP four-year presidential-cycle carry-forward is now specified as an explicit exception in METHODOLOGY.md §5.2 (v0.1.2). NAEP and every other biennial indicator remain bound by the one-year carry-forward rule.
 
-One earlier deviation — the 6/10 publication threshold in `scripts/compute_index.py` — was written into METHODOLOGY.md §5.3.1 in v0.1.1 and is no longer a deviation.
+Any future engineering deviation should either be reconciled the same way or removed.
 
 ## Naming note
 

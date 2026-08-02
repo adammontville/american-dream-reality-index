@@ -1,6 +1,6 @@
 # American Dream Reality Index — Methodology
 
-**Version:** 0.1.1
+**Version:** 0.1.2
 **Status:** Design finalized; pipeline and static site implemented.
 **Last updated:** 2026-08-02
 
@@ -119,6 +119,7 @@ Anchor revisions are versioned. A change to any anchor is a major-version bump (
 
 - **Outliers:** the clip to [0, 100] is the only outlier treatment. No winsorization, no trimming.
 - **Missing values:** if an indicator has no vintage for the target reference year, the index carries forward the most recent prior value **for at most one reference year**, with the ADRI record annotated `carried_forward: <indicator>`. If a second consecutive year is missing, the domain-score aggregation (§5.4) omits that indicator and the omission is annotated. The composite formula (§5.4) handles this by renormalizing weights within the affected domain.
+- **VEP presidential-cycle exception.** Indicator 9 (VEP turnout) is treated in this release as a presidential-only measure per NOTES.md §6.3, and is therefore permitted to carry forward for **up to four reference years** — the length of one presidential cycle. Applied literally, the one-year rule above would evict the Civic domain from every non-election year and suppress most reference years by §5.3.1. Every non-presidential year still receives the `carried_forward: vep_turnout` annotation. This exception is scoped to indicator 9 and does not extend to any other biennial or lower-frequency indicator (e.g., NAEP still gets at most the one-year grace). The exception is a candidate for removal in a MAJOR bump if a second civic indicator is added and VEP no longer needs a long carry-forward.
 - **Definitional breaks:** documented per-indicator (§7.4). No mechanical adjustment; each break is annotated in the time series and — where appropriate — a re-computed pre-break series is published alongside.
 
 ### 5.3 Aligning frequencies to an annual reference year
@@ -296,5 +297,6 @@ Full source URLs, access notes, and vintage tracking are maintained in `../data/
 
 ## Appendix B — Change log
 
-- **v0.1.1 (2026-08-02)** — MINOR. Added §5.3.1 formalizing the publication threshold used by the reference implementation (indicator coverage ≥ 6/10 and all six domains represented after carry-forward). Corrected a stale cross-reference in §5.2 (domain aggregation is defined in §5.4, not §5.3). One methodology↔implementation gap remains open and is not resolved in this revision: the reference implementation carries the VEP indicator forward for up to four years (a presidential cycle) rather than the one year permitted by §5.2. This will be reconciled in a later revision, either by adding an explicit exception here (MINOR) or by adding a second civic indicator so VEP no longer needs a long carry-forward (MAJOR).
+- **v0.1.2 (2026-08-02)** — MINOR. Added the VEP presidential-cycle carry-forward exception to §5.2 (up to four reference years for indicator 9 only). Closes the last methodology↔implementation gap flagged in v0.1.1. No score change: the reference implementation already carried VEP forward for four years; this revision only makes the methodology consistent with what the pipeline was already doing.
+- **v0.1.1 (2026-08-02)** — MINOR. Added §5.3.1 formalizing the publication threshold used by the reference implementation (indicator coverage ≥ 6/10 and all six domains represented after carry-forward). Corrected a stale cross-reference in §5.2 (domain aggregation is defined in §5.4, not §5.3). One methodology↔implementation gap remained open at the time of this release: the reference implementation carried the VEP indicator forward for up to four years rather than the one year permitted by §5.2. Resolved in v0.1.2.
 - **v0.1 (2026-08-02)** — Initial design draft. Indicator set frozen at 10 across six domains. Fixed-anchor min-max normalization, equal-within-domain aggregation, fixed domain weights (0.20/0.20/0.20/0.15/0.10/0.15). No computed values yet.
