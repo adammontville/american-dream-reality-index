@@ -118,16 +118,17 @@ Notes:
 
 ## 5. License and public release
 
+The repository ships with a **dual-license model** matching the BugOut Index:
+
+- [`LICENSE.md`](../LICENSE.md) — **GNU Affero General Public License v3.0** for open-source use. Any hosted derivative must publish source under the same terms.
+- [`COMMERCIAL_LICENSE.md`](../COMMERCIAL_LICENSE.md) — separate commercial license required for closed-source integration, paid SaaS, or ad/membership-supported sites. Contact: adam.w.montville@gmail.com.
+
 Before the repo is made public and before GitHub Pages is enabled:
 
-1. **Choose a license.**
-   - For code and scaffolding: **MIT** matches the BugOut pattern and imposes no obligations on downstream users. Recommended default.
-   - For methodology docs: consider **CC-BY-4.0** on `docs/` if attribution on reuse matters. Otherwise MIT covering everything is acceptable.
-2. **Add `LICENSE`** at the repo root (and, if separate, `docs/LICENSE`).
-3. **Update `README.md`** to replace `License: TBD before public release.` with the chosen license and a link to the file.
-4. **Enable GitHub Pages** with the `/site/` directory as the publishing source (branch: `main`, folder: `/site`). Confirm the site loads at `https://adammontville.github.io/american-dream-reality-index/` and that `assets/adri_timeseries.json` is fetchable.
-5. **Trademark check for any character-derived working title** ("McAvoy Index"). If not cleared, keep the descriptive `american-dream-reality-index` name in public materials.
-6. **Only after** the site is verified: consider enabling branch protection on `main` and adding Issues templates for methodology feedback.
+1. **Enable GitHub Pages** with the `/site/` directory as the publishing source (branch: `main`, folder: `/site`). Confirm the site loads at `https://adammontville.github.io/american-dream-reality-index/` and that `assets/adri_timeseries.json` is fetchable.
+2. **Confirm the ADRI wordmark is unencumbered.** A quick USPTO TESS search for "American Dream Reality Index" plus a general search for prior public use is inexpensive and worth doing before the site has a public URL.
+3. **Change repository visibility to Public** (Settings → General → Change visibility).
+4. **Only after** the site is verified: consider enabling branch protection on `main` and adding Issues templates for methodology feedback.
 
 ## 6. Failure modes to watch for
 

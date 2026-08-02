@@ -143,7 +143,7 @@ Both deviations are candidates for tightening once the methodology is next revis
 
 ## Naming note
 
-The working title "McAvoy Index" (referencing the *Newsroom* monologue that inspired the framing) remains under review. A public release will require a trademark check before any character-derived name is adopted. `american-dream-reality-index` is used here as a descriptive, non-branded working name.
+The project is named **American Dream Reality Index** (ADRI). The framing is inspired by the *Newsroom* Will McAvoy monologue but the index does not carry a character-derived name.
 
 ## Contributing
 

@@ -8,7 +8,7 @@ Working notes to accompany [METHODOLOGY.md](METHODOLOGY.md). This file captures 
 
 ### 1.1 Why "reality" and not "greatness"
 
-The *Newsroom* McAvoy monologue is the emotional anchor for this project, but "greatness" is not a measurable construct. The ADRI substitutes a narrower, testable claim: **structural conditions correlated with the plausibility of prosperity and mobility**. The word "reality" is a deliberate signal that this is a factual scorecard, not an argument about virtue.
+Aaron Sorkin's *Newsroom* monologue (Will McAvoy, "America is not the greatest country in the world anymore") is the emotional anchor for this project, but "greatness" is not a measurable construct. The ADRI substitutes a narrower, testable claim: **structural conditions correlated with the plausibility of prosperity and mobility**. The word "reality" is a deliberate signal that this is a factual scorecard, not an argument about virtue.
 
 ### 1.2 Two-pillar definition of the Dream
 
@@ -146,4 +146,4 @@ This is the working source-verification table that informed §3 of the methodolo
 
 ## 7. Naming
 
-"McAvoy Index" is the emotional/branding working title; `american-dream-reality-index` is the descriptive working name used in this repo. A public release under any character-derived name requires a trademark review. Alternative names considered so far have been described as lacking character; new suggestions are open.
+The project is named **American Dream Reality Index** (ADRI). The *Newsroom* McAvoy monologue is credited as the emotional anchor for the framing (see §1) but is not used as a title or brand.

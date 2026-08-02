@@ -152,7 +152,7 @@ Weights are **assigned by design intent**, not by statistical optimization. The 
 - Education, Health, and Prosperity each receive 0.20 because they are the three pillars most consistently supported by the empirical literature on economic mobility and the American-Dream framing (education as ladder, health as prerequisite, income as scaffold).
 - Opportunity (Gini as mobility proxy) receives 0.15 rather than 0.20 because a single indirect proxy should carry less weight than a two- or three-indicator domain.
 - Safety receives 0.15 because incarceration is a well-established structural condition affecting mobility (Western & Pettit 2010) but is a single indicator, so it does not warrant a full 0.20.
-- Civic receives 0.10 because VEP turnout is a partial measure of civic-institution health, and the domain has only one indicator. It stays in the composite because civic quality is thematically central to the McAvoy framing; it is down-weighted because the measurement is thinner than in other domains.
+- Civic receives 0.10 because VEP turnout is a partial measure of civic-institution health, and the domain has only one indicator. It stays in the composite because civic quality is thematically central to the ADRI framing; it is down-weighted because the measurement is thinner than in other domains.
 
 Let \( s_{d,i} \) be the 0–100 score of indicator \( i \) in domain \( d \), and \( n_d \) be the number of indicators in domain \( d \) with non-missing values. The domain score is:
 
