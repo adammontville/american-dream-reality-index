@@ -12,16 +12,16 @@
     "source": "U.S. adult bachelor's attainment was ~20% in the late 1980s and reached ~37\u201338% by 2024. L=20 anchors on the domestic historical low of the modern series; U=45 anchors above current U.S. levels at a plausible OECD-leader ceiling (e.g., Canada, Korea, Ireland for tertiary attainment adjusted for definitional differences)."
   },
   "raw_path": "data/raw/api_cache/bachelors_attainment_25plus.csv",
-  "vintage_note": "# indicator: Bachelor's degree attainment, age 25+ (%)\n# source: U.S. Census Bureau, ACS 1-Year, Table S1501.\n#         API: https://api.census.gov/data/YYYY/acs/acs1/subject\n# vintage: 2026-08-02 (through 2024 ACS 1-Year; 2020 skipped by Census)\n# note: percent of population age 25 and older with a bachelor's degree or\n#       higher; national estimate. Cached from Census API; refreshed by\n#       scripts/fetch_data.py when CENSUS_API_KEY is set.",
+  "vintage_note": "# indicator: Bachelor's degree attainment, age 25+\n# source: https://api.census.gov/data/2024/acs/acs1/subject\n# vintage: 2026-08-03 (auto-fetched)\n# ACS 1-Year S1501_C02_015E (percent bachelor's or higher, 25+).",
   "series": [
     {
       "year": 2010,
-      "value": 28.2,
+      "value": 28.5,
       "carried_forward": false
     },
     {
       "year": 2011,
-      "value": 28.5,
+      "value": 28.7,
       "carried_forward": false
     },
     {
@@ -36,7 +36,7 @@
     },
     {
       "year": 2014,
-      "value": 30.1,
+      "value": 29.9,
       "carried_forward": false
     },
     {
@@ -66,22 +66,22 @@
     },
     {
       "year": 2021,
-      "value": 32.9,
-      "carried_forward": false
-    },
-    {
-      "year": 2022,
-      "value": 33.7,
-      "carried_forward": false
-    },
-    {
-      "year": 2023,
       "value": 35.0,
       "carried_forward": false
     },
     {
+      "year": 2022,
+      "value": 35.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2023,
+      "value": 36.2,
+      "carried_forward": false
+    },
+    {
       "year": 2024,
-      "value": 35.4,
+      "value": 36.8,
       "carried_forward": false
     }
   ]
