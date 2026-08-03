@@ -12,21 +12,571 @@
     "source": "U.S. life expectancy at birth dipped to ~76.4 in 2021 and has sat between 76 and 79 since 2000. L=74 anchors below the pandemic trough as a stressed-domestic floor; U=84 anchors near the top-of-OECD ceiling (Japan, Switzerland ~84)."
   },
   "raw_path": "data/raw/api_cache/life_expectancy_at_birth.csv",
-  "vintage_note": "# indicator: Life expectancy at birth (years)\n# source: CDC / NCHS, National Vital Statistics System.\n#         Socrata dataset: https://data.cdc.gov/api/views/w9j2-ggv5\n# vintage: 2026-08-02 (through 2023 final; 2024 provisional not used)\n# note: total population, both sexes, all races. Final NVSS figures only;\n#       provisional data are ignored per METHODOLOGY.md indicator #3.",
+  "vintage_note": "# indicator: Life expectancy at birth\n# source: https://data.cdc.gov/api/views/w9j2-ggv5/rows.csv\n# vintage: 2026-08-03 (auto-fetched)\n# Socrata dataset w9j2-ggv5, filtered to All Races \u00d7 Both Sexes. Provisional values may be present; the processing step should prefer the most recent final vintage where the two overlap.",
   "series": [
+    {
+      "year": 1900,
+      "value": 47.3,
+      "carried_forward": false
+    },
+    {
+      "year": 1901,
+      "value": 49.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1902,
+      "value": 51.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1903,
+      "value": 50.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1904,
+      "value": 47.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1905,
+      "value": 48.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1906,
+      "value": 48.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1907,
+      "value": 47.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1908,
+      "value": 51.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1909,
+      "value": 52.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1910,
+      "value": 50.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1911,
+      "value": 52.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1912,
+      "value": 53.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1913,
+      "value": 52.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1914,
+      "value": 54.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1915,
+      "value": 54.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1916,
+      "value": 51.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1917,
+      "value": 50.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1918,
+      "value": 39.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1919,
+      "value": 54.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1920,
+      "value": 54.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1921,
+      "value": 60.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1922,
+      "value": 59.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1923,
+      "value": 57.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1924,
+      "value": 59.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1925,
+      "value": 59.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1926,
+      "value": 56.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1927,
+      "value": 60.4,
+      "carried_forward": false
+    },
+    {
+      "year": 1928,
+      "value": 56.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1929,
+      "value": 57.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1930,
+      "value": 59.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1931,
+      "value": 61.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1932,
+      "value": 62.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1933,
+      "value": 63.3,
+      "carried_forward": false
+    },
+    {
+      "year": 1934,
+      "value": 61.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1935,
+      "value": 61.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1936,
+      "value": 58.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1937,
+      "value": 60.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1938,
+      "value": 63.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1939,
+      "value": 63.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1940,
+      "value": 62.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1941,
+      "value": 64.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1942,
+      "value": 66.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1943,
+      "value": 63.3,
+      "carried_forward": false
+    },
+    {
+      "year": 1944,
+      "value": 65.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1945,
+      "value": 65.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1946,
+      "value": 66.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1947,
+      "value": 66.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1948,
+      "value": 67.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1949,
+      "value": 68.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1950,
+      "value": 68.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1951,
+      "value": 68.4,
+      "carried_forward": false
+    },
+    {
+      "year": 1952,
+      "value": 68.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1953,
+      "value": 68.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1954,
+      "value": 69.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1955,
+      "value": 69.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1956,
+      "value": 69.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1957,
+      "value": 69.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1958,
+      "value": 69.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1959,
+      "value": 69.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1960,
+      "value": 69.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1961,
+      "value": 70.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1962,
+      "value": 70.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1963,
+      "value": 69.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1964,
+      "value": 70.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1965,
+      "value": 70.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1966,
+      "value": 70.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1967,
+      "value": 70.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1968,
+      "value": 70.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1969,
+      "value": 70.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1970,
+      "value": 70.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1971,
+      "value": 71.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1972,
+      "value": 71.2,
+      "carried_forward": false
+    },
+    {
+      "year": 1973,
+      "value": 71.4,
+      "carried_forward": false
+    },
+    {
+      "year": 1974,
+      "value": 72.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1975,
+      "value": 72.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1976,
+      "value": 72.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1977,
+      "value": 73.3,
+      "carried_forward": false
+    },
+    {
+      "year": 1978,
+      "value": 73.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1979,
+      "value": 73.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1980,
+      "value": 73.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1981,
+      "value": 74.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1982,
+      "value": 74.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1983,
+      "value": 74.6,
+      "carried_forward": false
+    },
+    {
+      "year": 1984,
+      "value": 74.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1985,
+      "value": 74.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1986,
+      "value": 74.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1987,
+      "value": 74.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1988,
+      "value": 74.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1989,
+      "value": 75.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1990,
+      "value": 75.4,
+      "carried_forward": false
+    },
+    {
+      "year": 1991,
+      "value": 75.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1992,
+      "value": 75.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1993,
+      "value": 75.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1994,
+      "value": 75.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1995,
+      "value": 75.8,
+      "carried_forward": false
+    },
+    {
+      "year": 1996,
+      "value": 76.1,
+      "carried_forward": false
+    },
+    {
+      "year": 1997,
+      "value": 76.5,
+      "carried_forward": false
+    },
+    {
+      "year": 1998,
+      "value": 76.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1999,
+      "value": 76.7,
+      "carried_forward": false
+    },
     {
       "year": 2000,
       "value": 76.8,
       "carried_forward": false
     },
     {
+      "year": 2001,
+      "value": 77.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2002,
+      "value": 77.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2003,
+      "value": 77.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2004,
+      "value": 77.5,
+      "carried_forward": false
+    },
+    {
       "year": 2005,
-      "value": 77.4,
+      "value": 77.6,
+      "carried_forward": false
+    },
+    {
+      "year": 2006,
+      "value": 77.8,
+      "carried_forward": false
+    },
+    {
+      "year": 2007,
+      "value": 78.1,
+      "carried_forward": false
+    },
+    {
+      "year": 2008,
+      "value": 78.2,
+      "carried_forward": false
+    },
+    {
+      "year": 2009,
+      "value": 78.5,
       "carried_forward": false
     },
     {
       "year": 2010,
       "value": 78.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2011,
+      "value": 78.7,
+      "carried_forward": false
+    },
+    {
+      "year": 2012,
+      "value": 78.8,
       "carried_forward": false
     },
     {
@@ -46,7 +596,7 @@
     },
     {
       "year": 2016,
-      "value": 78.6,
+      "value": 78.7,
       "carried_forward": false
     },
     {
@@ -57,31 +607,6 @@
     {
       "year": 2018,
       "value": 78.7,
-      "carried_forward": false
-    },
-    {
-      "year": 2019,
-      "value": 78.8,
-      "carried_forward": false
-    },
-    {
-      "year": 2020,
-      "value": 77.0,
-      "carried_forward": false
-    },
-    {
-      "year": 2021,
-      "value": 76.4,
-      "carried_forward": false
-    },
-    {
-      "year": 2022,
-      "value": 77.5,
-      "carried_forward": false
-    },
-    {
-      "year": 2023,
-      "value": 78.4,
       "carried_forward": false
     }
   ]

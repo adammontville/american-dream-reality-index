@@ -12,76 +12,206 @@
     "source": "Real median household income (FRED MEHOINUSA672N, 2024 CPI-U-RS dollars) ranged ~$56k in 1994 to ~$83.7k in 2024. L=55000 anchors below the modern-series floor; U=90000 anchors above the 2024 high as a plausible near-term ceiling."
   },
   "raw_path": "data/raw/api_cache/real_median_household_income.csv",
-  "vintage_note": "# indicator: Real median household income (2024 CPI-U-RS-adjusted dollars)\n# source: FRED series MEHOINUSA672N (Census CPS ASEC, hosted at FRED).\n#         API: https://api.stlouisfed.org/fred/series/observations\n# vintage: 2026-08-02 (through 2024, released Sep 2025)\n# note: annual real median household income, U.S. total. Deflator seam\n#       (R-CPI-U-RS to C-CPI-U) noted in METHODOLOGY.md \u00a77.4.",
+  "vintage_note": "# indicator: Real median household income\n# source: https://fred.stlouisfed.org/series/MEHOINUSA672N\n# vintage: 2026-08-03 (auto-fetched)\n# FRED series MEHOINUSA672N, one obs per year. Values in real dollars per FRED metadata.",
   "series": [
     {
+      "year": 1984,
+      "value": 60420.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1985,
+      "value": 61570.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1986,
+      "value": 63850.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1987,
+      "value": 64650.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1988,
+      "value": 65130.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1989,
+      "value": 66240.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1990,
+      "value": 65440.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1991,
+      "value": 63530.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1992,
+      "value": 63010.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1993,
+      "value": 62700.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1994,
+      "value": 63370.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1995,
+      "value": 65380.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1996,
+      "value": 66340.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1997,
+      "value": 67720.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1998,
+      "value": 70200.0,
+      "carried_forward": false
+    },
+    {
+      "year": 1999,
+      "value": 71980.0,
+      "carried_forward": false
+    },
+    {
       "year": 2000,
-      "value": 74770.0,
+      "value": 71790.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2001,
+      "value": 70610.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2002,
+      "value": 70040.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2003,
+      "value": 70080.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2004,
+      "value": 69970.0,
       "carried_forward": false
     },
     {
       "year": 2005,
-      "value": 72580.0,
+      "value": 71060.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2006,
+      "value": 71850.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2007,
+      "value": 73010.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2008,
+      "value": 70520.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2009,
+      "value": 70070.0,
       "carried_forward": false
     },
     {
       "year": 2010,
-      "value": 68440.0,
+      "value": 68420.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2011,
+      "value": 67410.0,
+      "carried_forward": false
+    },
+    {
+      "year": 2012,
+      "value": 67400.0,
       "carried_forward": false
     },
     {
       "year": 2013,
-      "value": 68910.0,
+      "value": 69950.0,
       "carried_forward": false
     },
     {
       "year": 2014,
-      "value": 69440.0,
+      "value": 69060.0,
       "carried_forward": false
     },
     {
       "year": 2015,
-      "value": 72360.0,
+      "value": 72790.0,
       "carried_forward": false
     },
     {
       "year": 2016,
-      "value": 74180.0,
+      "value": 75380.0,
       "carried_forward": false
     },
     {
       "year": 2017,
-      "value": 75150.0,
+      "value": 76710.0,
       "carried_forward": false
     },
     {
       "year": 2018,
-      "value": 75790.0,
+      "value": 77700.0,
       "carried_forward": false
     },
     {
       "year": 2019,
-      "value": 81210.0,
+      "value": 83260.0,
       "carried_forward": false
     },
     {
       "year": 2020,
-      "value": 79320.0,
+      "value": 81580.0,
       "carried_forward": false
     },
     {
       "year": 2021,
-      "value": 76330.0,
+      "value": 81270.0,
       "carried_forward": false
     },
     {
       "year": 2022,
-      "value": 74580.0,
+      "value": 79500.0,
       "carried_forward": false
     },
     {
       "year": 2023,
-      "value": 80610.0,
+      "value": 82690.0,
       "carried_forward": false
     },
     {

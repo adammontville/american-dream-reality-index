@@ -12,46 +12,336 @@
     "source": "Prime-age EPOP (FRED LNS12300060, annual mean of monthly SA values) has ranged ~74.8 in 2010 to ~80.9 in 2000 and ~80.9 in 2024. L=70 anchors below any modern-series reading; U=82 anchors above historical peaks as a strong-labor-utilization ceiling."
   },
   "raw_path": "data/raw/api_cache/prime_age_epop.csv",
-  "vintage_note": "# indicator: Prime-age (25\u201354) employment-to-population ratio (%)\n# source: FRED series LNS12300060 (BLS Current Population Survey, SA).\n#         API: https://api.stlouisfed.org/fred/series/observations\n# vintage: 2026-08-02 (annualized through 2024)\n# note: annual mean of 12 monthly seasonally-adjusted values, per\n#       METHODOLOGY.md \u00a75.3.",
+  "vintage_note": "# indicator: Prime-age (25\u201354) employment-to-population ratio\n# source: https://fred.stlouisfed.org/series/LNS12300060\n# vintage: 2026-08-03 (auto-fetched)\n# FRED series LNS12300060 (monthly SA); annualized by arithmetic mean of monthly values per METHODOLOGY.md \u00a75.3.",
   "series": [
     {
+      "year": 1948,
+      "value": 62.98333333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1949,
+      "value": 62.083333333333336,
+      "carried_forward": false
+    },
+    {
+      "year": 1950,
+      "value": 62.84166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1951,
+      "value": 64.40833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1952,
+      "value": 65.03333333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1953,
+      "value": 65.31666666666666,
+      "carried_forward": false
+    },
+    {
+      "year": 1954,
+      "value": 63.85833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1955,
+      "value": 65.23333333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1956,
+      "value": 65.9,
+      "carried_forward": false
+    },
+    {
+      "year": 1957,
+      "value": 65.95833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1958,
+      "value": 64.61666666666666,
+      "carried_forward": false
+    },
+    {
+      "year": 1959,
+      "value": 65.64166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1960,
+      "value": 65.83333333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1961,
+      "value": 65.29166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1962,
+      "value": 65.98333333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1963,
+      "value": 66.44166666666666,
+      "carried_forward": false
+    },
+    {
+      "year": 1964,
+      "value": 66.96666666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1965,
+      "value": 67.64999999999999,
+      "carried_forward": false
+    },
+    {
+      "year": 1966,
+      "value": 68.45833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1967,
+      "value": 68.98333333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1968,
+      "value": 69.45833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1969,
+      "value": 69.95,
+      "carried_forward": false
+    },
+    {
+      "year": 1970,
+      "value": 69.60833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1971,
+      "value": 69.01666666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1972,
+      "value": 69.50833333333334,
+      "carried_forward": false
+    },
+    {
+      "year": 1973,
+      "value": 70.49166666666666,
+      "carried_forward": false
+    },
+    {
+      "year": 1974,
+      "value": 70.81666666666666,
+      "carried_forward": false
+    },
+    {
+      "year": 1975,
+      "value": 69.34166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1976,
+      "value": 70.60833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1977,
+      "value": 71.875,
+      "carried_forward": false
+    },
+    {
+      "year": 1978,
+      "value": 73.61666666666666,
+      "carried_forward": false
+    },
+    {
+      "year": 1979,
+      "value": 74.59166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1980,
+      "value": 74.34166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1981,
+      "value": 74.64999999999999,
+      "carried_forward": false
+    },
+    {
+      "year": 1982,
+      "value": 73.50833333333334,
+      "carried_forward": false
+    },
+    {
+      "year": 1983,
+      "value": 73.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1984,
+      "value": 75.825,
+      "carried_forward": false
+    },
+    {
+      "year": 1985,
+      "value": 76.7,
+      "carried_forward": false
+    },
+    {
+      "year": 1986,
+      "value": 77.30833333333332,
+      "carried_forward": false
+    },
+    {
+      "year": 1987,
+      "value": 78.35833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1988,
+      "value": 79.18333333333334,
+      "carried_forward": false
+    },
+    {
+      "year": 1989,
+      "value": 79.925,
+      "carried_forward": false
+    },
+    {
+      "year": 1990,
+      "value": 79.68333333333334,
+      "carried_forward": false
+    },
+    {
+      "year": 1991,
+      "value": 78.64166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1992,
+      "value": 78.31666666666668,
+      "carried_forward": false
+    },
+    {
+      "year": 1993,
+      "value": 78.54166666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 1994,
+      "value": 79.23333333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1995,
+      "value": 79.74166666666666,
+      "carried_forward": false
+    },
+    {
+      "year": 1996,
+      "value": 80.20833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1997,
+      "value": 80.85833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1998,
+      "value": 81.10833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 1999,
+      "value": 81.425,
+      "carried_forward": false
+    },
+    {
       "year": 2000,
-      "value": 81.5,
+      "value": 81.45833333333333,
+      "carried_forward": false
+    },
+    {
+      "year": 2001,
+      "value": 80.55,
+      "carried_forward": false
+    },
+    {
+      "year": 2002,
+      "value": 79.325,
+      "carried_forward": false
+    },
+    {
+      "year": 2003,
+      "value": 78.825,
+      "carried_forward": false
+    },
+    {
+      "year": 2004,
+      "value": 78.96666666666667,
       "carried_forward": false
     },
     {
       "year": 2005,
-      "value": 79.3,
+      "value": 79.325,
+      "carried_forward": false
+    },
+    {
+      "year": 2006,
+      "value": 79.825,
       "carried_forward": false
     },
     {
       "year": 2007,
-      "value": 79.9,
+      "value": 79.89999999999999,
+      "carried_forward": false
+    },
+    {
+      "year": 2008,
+      "value": 79.09166666666667,
       "carried_forward": false
     },
     {
       "year": 2009,
-      "value": 75.3,
+      "value": 75.78333333333333,
       "carried_forward": false
     },
     {
       "year": 2010,
-      "value": 74.8,
+      "value": 75.08333333333333,
       "carried_forward": false
     },
     {
       "year": 2011,
-      "value": 75.1,
+      "value": 75.125,
       "carried_forward": false
     },
     {
       "year": 2012,
-      "value": 75.7,
+      "value": 75.74166666666666,
       "carried_forward": false
     },
     {
       "year": 2013,
-      "value": 76.0,
+      "value": 75.89166666666667,
       "carried_forward": false
     },
     {
@@ -61,52 +351,62 @@
     },
     {
       "year": 2015,
-      "value": 77.3,
+      "value": 77.23333333333333,
       "carried_forward": false
     },
     {
       "year": 2016,
-      "value": 78.0,
+      "value": 77.93333333333334,
       "carried_forward": false
     },
     {
       "year": 2017,
-      "value": 78.6,
+      "value": 78.625,
       "carried_forward": false
     },
     {
       "year": 2018,
-      "value": 79.3,
+      "value": 79.35833333333333,
       "carried_forward": false
     },
     {
       "year": 2019,
-      "value": 80.0,
+      "value": 79.95,
       "carried_forward": false
     },
     {
       "year": 2020,
-      "value": 75.9,
+      "value": 75.63333333333334,
       "carried_forward": false
     },
     {
       "year": 2021,
-      "value": 78.3,
+      "value": 77.60000000000001,
       "carried_forward": false
     },
     {
       "year": 2022,
-      "value": 80.0,
+      "value": 79.88333333333334,
       "carried_forward": false
     },
     {
       "year": 2023,
-      "value": 80.7,
+      "value": 80.68333333333334,
       "carried_forward": false
     },
     {
       "year": 2024,
-      "value": 80.9,
+      "value": 80.71666666666667,
+      "carried_forward": false
+    },
+    {
+      "year": 2025,
+      "value": 80.60000000000001,
+      "carried_forward": false
+    },
+    {
+      "year": 2026,
+      "value": 80.64999999999999,
       "carried_forward": false
     }
   ]

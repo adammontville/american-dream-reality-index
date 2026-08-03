@@ -1,22 +1,46 @@
-# indicator: Real median household income (2024 CPI-U-RS-adjusted dollars)
-# source: FRED series MEHOINUSA672N (Census CPS ASEC, hosted at FRED).
-#         API: https://api.stlouisfed.org/fred/series/observations
-# vintage: 2026-08-02 (through 2024, released Sep 2025)
-# note: annual real median household income, U.S. total. Deflator seam
-#       (R-CPI-U-RS to C-CPI-U) noted in METHODOLOGY.md §7.4.
+# indicator: Real median household income
+# source: https://fred.stlouisfed.org/series/MEHOINUSA672N
+# vintage: 2026-08-03 (auto-fetched)
+# FRED series MEHOINUSA672N, one obs per year. Values in real dollars per FRED metadata.
 year,value
-2000,74770
-2005,72580
-2010,68440
-2013,68910
-2014,69440
-2015,72360
-2016,74180
-2017,75150
-2018,75790
-2019,81210
-2020,79320
-2021,76330
-2022,74580
-2023,80610
-2024,83730
+1984,60420.0
+1985,61570.0
+1986,63850.0
+1987,64650.0
+1988,65130.0
+1989,66240.0
+1990,65440.0
+1991,63530.0
+1992,63010.0
+1993,62700.0
+1994,63370.0
+1995,65380.0
+1996,66340.0
+1997,67720.0
+1998,70200.0
+1999,71980.0
+2000,71790.0
+2001,70610.0
+2002,70040.0
+2003,70080.0
+2004,69970.0
+2005,71060.0
+2006,71850.0
+2007,73010.0
+2008,70520.0
+2009,70070.0
+2010,68420.0
+2011,67410.0
+2012,67400.0
+2013,69950.0
+2014,69060.0
+2015,72790.0
+2016,75380.0
+2017,76710.0
+2018,77700.0
+2019,83260.0
+2020,81580.0
+2021,81270.0
+2022,79500.0
+2023,82690.0
+2024,83730.0
