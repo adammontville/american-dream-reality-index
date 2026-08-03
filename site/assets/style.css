@@ -1,19 +1,44 @@
 /* American Dream Reality Index — site styles.
- * Deliberately plain: no CDN, no framework.
+ *
+ * Palette matches the author's Substack visual identity so the two sites
+ * read as a family:
+ *   navy   #0b2d52  (primary type, wordmark, chart line)
+ *   cream  #FBEFD9  (page background, card fills)
+ *   amber  #d97706  (single accent: links, focus, chart annotations)
+ *
+ * Type: Playfair Display for the display wordmark and page headings,
+ * Source Serif 4 for body copy. Both self-load from Google Fonts; the
+ * font-family stacks fall back to system serifs so the page remains
+ * readable if the fonts fail to load.
+ *
+ * No framework, no CDN beyond the font files.
  */
 
 :root {
-  --bg: #fbfaf7;
-  --fg: #1c1e21;
-  --muted: #5e6572;
-  --accent: #2d5a8a;
-  --accent-soft: #d8e4f2;
-  --line: #dcd8d2;
-  --card-bg: #ffffff;
+  --navy: #0b2d52;
+  --navy-soft: #234670;
+  --cream: #FBEFD9;
+  --cream-hi: #fff7e3;       /* card fill: 1 step lighter than the page */
+  --cream-lo: #f0e2c5;       /* muted rules and hairlines */
+  --amber: #d97706;
+  --amber-soft: #f2d19a;
+
+  --fg: var(--navy);
+  --bg: var(--cream);
+  --muted: #5a6a80;          /* navy shifted toward gray for secondary type */
+  --accent: var(--amber);
+  --line: var(--cream-lo);
+  --card-bg: var(--cream-hi);
+
   --up: #2f7a4d;
   --down: #a3452c;
-  --flat: #5e6572;
+  --flat: #5a6a80;
+
   --max-width: 68rem;
+
+  --font-display: "Playfair Display", "Bodoni Moda", Georgia, "Times New Roman", serif;
+  --font-body: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Menlo", "Consolas", monospace;
 }
 
 * { box-sizing: border-box; }
@@ -23,52 +48,79 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: var(--font-body);
   font-size: 17px;
-  line-height: 1.55;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 body { padding-bottom: 3rem; }
 
-a { color: var(--accent); text-decoration: underline; }
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 a:hover { text-decoration: none; }
+
+/* --- Header / wordmark ---------------------------------------------------- */
 
 .site-header {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 1.5rem;
+  padding: 3rem 1.25rem 1.5rem;
   border-bottom: 1px solid var(--line);
 }
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+  color: var(--navy);
+}
+.wordmark .wordmark-mono {
+  /* First word gets a bolder weight; second gets lighter — mirrors the
+     "ADAM MONTVILLE" masthead treatment on the Substack. */
+  font-weight: 900;
+}
+.wordmark .wordmark-thin { font-weight: 400; }
+
 .site-header h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
   font-size: 2rem;
   margin: 0 0 0.25rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
 }
 .site-header .tagline {
   color: var(--muted);
   font-size: 1.05rem;
-  margin: 0 0 0.75rem;
-  max-width: 42rem;
+  margin: 0 0 1rem;
+  max-width: 44rem;
+  line-height: 1.55;
 }
 .site-header nav a {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   font-size: 0.95rem;
 }
 
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 1.25rem;
+  padding: 1.75rem 1.25rem;
 }
 
 section { margin-bottom: 2.75rem; }
 section h2 {
-  font-size: 1.25rem;
-  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin: 0 0 0.85rem;
   letter-spacing: -0.005em;
+  color: var(--navy);
 }
 
-/* Latest ADRI section */
+/* --- Latest ADRI card ---------------------------------------------------- */
+
 .latest {
   display: grid;
   grid-template-columns: 18rem 1fr;
@@ -79,141 +131,147 @@ section h2 {
   .latest { grid-template-columns: 1fr; }
 }
 
-.latest-card {
+.latest-card, .chart-wrap, .domain-card {
   background: var(--card-bg);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 1.25rem;
 }
 .latest-label {
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.78rem;
-  margin: 0 0 0.25rem;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin: 0 0 0.35rem;
+  font-family: var(--font-body);
 }
 .latest-value {
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: 3.4rem;
   font-weight: 700;
   margin: 0;
-  line-height: 1.05;
-  color: var(--accent);
-  font-family: "Helvetica Neue", "Arial", sans-serif;
+  line-height: 1.0;
+  color: var(--navy);
+  letter-spacing: -0.01em;
 }
-.latest-year { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0 0.75rem; }
+.latest-year { color: var(--muted); font-size: 0.95rem; margin: 0.35rem 0 0.85rem; }
 .latest-trend { margin: 0.35rem 0; font-size: 0.95rem; }
 .latest-trend.up { color: var(--up); }
 .latest-trend.down { color: var(--down); }
 .latest-trend.flat { color: var(--flat); }
 .latest-equal, .latest-confidence {
-  margin: 0.15rem 0; color: var(--muted); font-size: 0.9rem;
+  margin: 0.2rem 0; color: var(--muted); font-size: 0.9rem;
 }
 
-.chart-wrap {
-  background: var(--card-bg);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 1rem 1rem 0.75rem;
-}
+.chart-wrap { padding: 1rem 1rem 0.75rem; }
 #chart-container { width: 100%; }
 #chart-container svg { width: 100%; height: auto; display: block; }
-.chart-caption { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+.chart-caption { color: var(--muted); font-size: 0.85rem; margin: 0.4rem 0 0; }
 
-/* Domain grid */
+/* --- Domain grid --------------------------------------------------------- */
+
 .domain-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   gap: 0.75rem;
 }
-.domain-card {
-  background: var(--card-bg);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 0.75rem 0.9rem;
-}
+.domain-card { padding: 0.85rem 1rem; }
 .domain-name {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--muted);
-  margin: 0 0 0.2rem;
+  margin: 0 0 0.25rem;
 }
 .domain-score {
-  font-size: 1.6rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
   font-weight: 700;
   margin: 0;
-  color: var(--accent);
-  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: var(--navy);
+  letter-spacing: -0.005em;
 }
 .domain-weight {
   color: var(--muted);
   font-size: 0.8rem;
-  margin: 0.15rem 0 0;
+  margin: 0.2rem 0 0;
 }
 
-/* Caveats */
-.caveats ul { padding-left: 1.25rem; }
-.caveats li { margin-bottom: 0.4rem; }
+/* --- Caveats ------------------------------------------------------------- */
 
-/* Methodology page */
+.caveats ul { padding-left: 1.25rem; }
+.caveats li { margin-bottom: 0.5rem; }
+
+/* --- Methodology page --------------------------------------------------- */
+
 .prose {
   max-width: 44rem;
   margin: 0 auto;
   padding: 1rem 1.25rem 2rem;
 }
 .prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
   letter-spacing: -0.005em;
-  margin-top: 1.75rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.85rem;
+  margin-bottom: 0.55rem;
+  color: var(--navy);
 }
-.prose h1 { font-size: 1.75rem; }
-.prose h2 { font-size: 1.3rem; }
-.prose h3 { font-size: 1.1rem; }
-.prose p, .prose ul, .prose ol, .prose blockquote { margin: 0.6rem 0; }
+.prose h1 { font-size: 1.9rem; }
+.prose h2 { font-size: 1.4rem; }
+.prose h3 { font-size: 1.15rem; }
+.prose p, .prose ul, .prose ol, .prose blockquote { margin: 0.65rem 0; }
 .prose blockquote {
-  border-left: 3px solid var(--accent-soft);
-  padding: 0.25rem 0.75rem;
+  border-left: 3px solid var(--amber);
+  padding: 0.35rem 0.9rem;
   color: var(--muted);
-  margin: 0.75rem 0;
+  margin: 0.9rem 0;
+  background: rgba(217, 119, 6, 0.05);
 }
 .prose code {
-  font-family: "Menlo", "Consolas", monospace;
-  font-size: 0.9em;
-  background: #eeece7;
-  padding: 0.05em 0.3em;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--cream-lo);
+  padding: 0.05em 0.35em;
   border-radius: 3px;
+  color: var(--navy);
 }
 .prose pre {
-  background: #eeece7;
-  padding: 0.75rem;
+  background: var(--cream-lo);
+  padding: 0.85rem 1rem;
   overflow-x: auto;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  border: 1px solid var(--line);
 }
 .prose pre code { background: transparent; padding: 0; }
 .prose hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
 
-.table-wrap { overflow-x: auto; margin: 1rem 0; }
+.table-wrap { overflow-x: auto; margin: 1.2rem 0; }
 .prose table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  font-family: var(--font-body);
 }
 .prose th, .prose td {
   border: 1px solid var(--line);
-  padding: 0.4rem 0.6rem;
+  padding: 0.5rem 0.7rem;
   text-align: left;
   vertical-align: top;
 }
-.prose th { background: #f2efe9; }
+.prose th { background: var(--cream-lo); font-weight: 700; }
 
-/* Footer */
+/* --- Footer -------------------------------------------------------------- */
+
 .site-footer {
   max-width: var(--max-width);
-  margin: 2.5rem auto 0;
-  padding: 1rem 1.25rem;
+  margin: 3rem auto 0;
+  padding: 1.5rem 1.25rem 2rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.85rem;
+  line-height: 1.55;
 }
-.site-footer p { margin: 0.25rem 0; }
+.site-footer p { margin: 0.3rem 0; }
+.site-footer .footer-license { margin-top: 0.75rem; }

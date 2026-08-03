@@ -15,6 +15,16 @@
 
   const DATA_URL = "assets/adri_timeseries.json";
 
+  // Palette mirrors site/assets/style.css :root — keep these in sync.
+  const COLORS = {
+    navy: "#0b2d52",     // primary series (design-weighted ADRI)
+    amber: "#d97706",    // secondary series (equal-weight variant)
+    axis: "#5a6a80",     // muted navy for axis text and tick lines
+    grid: "#f0e2c5",     // cream_lo for gridlines
+    body: "#0b2d52",     // legend text
+  };
+  const FONT_STACK = 'Source Serif 4, Georgia, serif';
+
   function $(id) { return document.getElementById(id); }
 
   function fmt(n, digits) {
@@ -53,7 +63,7 @@
     const ih = H - PAD.top - PAD.bottom;
 
     if (!series.length) {
-      return `<svg viewBox="0 0 ${W} ${H}"><text x="${W/2}" y="${H/2}" text-anchor="middle" fill="#666" font-family="Georgia, serif">No data</text></svg>`;
+      return `<svg viewBox="0 0 ${W} ${H}"><text x="${W/2}" y="${H/2}" text-anchor="middle" fill="${COLORS.axis}" font-family="${FONT_STACK}">No data</text></svg>`;
     }
 
     const years = series.map(r => r.year);
@@ -76,8 +86,8 @@
     let gridlines = "";
     for (let v = vMin; v <= vMax; v += 10) {
       const y = yPos(v);
-      gridlines += `<line x1="${PAD.left}" y1="${y}" x2="${W - PAD.right}" y2="${y}" stroke="#e6e2dc" stroke-width="1"/>`;
-      gridlines += `<text x="${PAD.left - 6}" y="${y + 3}" text-anchor="end" font-size="10" fill="#5e6572" font-family="Helvetica, Arial, sans-serif">${v}</text>`;
+      gridlines += `<line x1="${PAD.left}" y1="${y}" x2="${W - PAD.right}" y2="${y}" stroke="${COLORS.grid}" stroke-width="1"/>`;
+      gridlines += `<text x="${PAD.left - 6}" y="${y + 3}" text-anchor="end" font-size="10" fill="${COLORS.axis}" font-family="${FONT_STACK}">${v}</text>`;
     }
 
     // X axis ticks: every ~5 years
@@ -86,8 +96,8 @@
     const firstTick = Math.ceil(yMin / step) * step;
     for (let y = firstTick; y <= yMax; y += step) {
       const x = xPos(y);
-      xticks += `<line x1="${x}" y1="${H - PAD.bottom}" x2="${x}" y2="${H - PAD.bottom + 4}" stroke="#5e6572"/>`;
-      xticks += `<text x="${x}" y="${H - PAD.bottom + 16}" text-anchor="middle" font-size="10" fill="#5e6572" font-family="Helvetica, Arial, sans-serif">${y}</text>`;
+      xticks += `<line x1="${x}" y1="${H - PAD.bottom}" x2="${x}" y2="${H - PAD.bottom + 4}" stroke="${COLORS.axis}"/>`;
+      xticks += `<text x="${x}" y="${H - PAD.bottom + 16}" text-anchor="middle" font-size="10" fill="${COLORS.axis}" font-family="${FONT_STACK}">${y}</text>`;
     }
 
     function polyline(getter, color, dash) {
@@ -107,10 +117,10 @@
     }
 
     const legend = `
-      <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c1e21">
-        <line x1="${W - PAD.right - 200}" y1="${PAD.top + 4}" x2="${W - PAD.right - 180}" y2="${PAD.top + 4}" stroke="#2d5a8a" stroke-width="2"/>
+      <g font-family="${FONT_STACK}" font-size="11" fill="${COLORS.body}">
+        <line x1="${W - PAD.right - 200}" y1="${PAD.top + 4}" x2="${W - PAD.right - 180}" y2="${PAD.top + 4}" stroke="${COLORS.navy}" stroke-width="2"/>
         <text x="${W - PAD.right - 175}" y="${PAD.top + 8}">Design-weighted ADRI</text>
-        <line x1="${W - PAD.right - 200}" y1="${PAD.top + 22}" x2="${W - PAD.right - 180}" y2="${PAD.top + 22}" stroke="#a3452c" stroke-width="2" stroke-dasharray="4 3"/>
+        <line x1="${W - PAD.right - 200}" y1="${PAD.top + 22}" x2="${W - PAD.right - 180}" y2="${PAD.top + 22}" stroke="${COLORS.amber}" stroke-width="2" stroke-dasharray="4 3"/>
         <text x="${W - PAD.right - 175}" y="${PAD.top + 26}">Equal-weight variant</text>
       </g>
     `;
@@ -119,12 +129,12 @@
       <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="ADRI line chart">
         ${gridlines}
         ${xticks}
-        <line x1="${PAD.left}" y1="${H - PAD.bottom}" x2="${W - PAD.right}" y2="${H - PAD.bottom}" stroke="#5e6572"/>
-        <line x1="${PAD.left}" y1="${PAD.top}" x2="${PAD.left}" y2="${H - PAD.bottom}" stroke="#5e6572"/>
-        ${polyline("adri_equal_weight", "#a3452c", "4 3")}
-        ${polyline("adri", "#2d5a8a", "")}
-        ${dots("adri_equal_weight", "#a3452c")}
-        ${dots("adri", "#2d5a8a")}
+        <line x1="${PAD.left}" y1="${H - PAD.bottom}" x2="${W - PAD.right}" y2="${H - PAD.bottom}" stroke="${COLORS.axis}"/>
+        <line x1="${PAD.left}" y1="${PAD.top}" x2="${PAD.left}" y2="${H - PAD.bottom}" stroke="${COLORS.axis}"/>
+        ${polyline("adri_equal_weight", COLORS.amber, "4 3")}
+        ${polyline("adri", COLORS.navy, "")}
+        ${dots("adri_equal_weight", COLORS.amber)}
+        ${dots("adri", COLORS.navy)}
         ${legend}
       </svg>
     `;

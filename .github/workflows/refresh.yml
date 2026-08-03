@@ -1,0 +1,72 @@
+name: Quarterly refresh
+
+# Runs the full ADRI pipeline once a quarter, on the first Sunday of
+# Jan / Apr / Jul / Oct at 10:00 UTC. Cadence matches the reasoning in
+# docs/update-cadence.md: quarterly is the right rate for the ADRI given
+# that most indicators are annual or slower and the fastest (prime-age
+# EPOP) already averages 12 months into the reference year.
+#
+# The workflow:
+#   1. Checks out main.
+#   2. Runs scripts/run_all.py (fetch -> process -> compute -> render).
+#   3. Commits anything that changed under data/, site/assets/, and
+#      site/methodology.html back to main.
+#
+# A commit to main touching site/** triggers .github/workflows/pages.yml,
+# which redeploys the site. If run_all.py produces no changes (which is
+# the common case between annual releases), no commit is made.
+#
+# The two FRED / Census API keys are read from repo secrets. If either
+# is unset, scripts/fetch_data.py degrades gracefully: it logs a warning
+# and keeps the existing cached CSVs. The pipeline still runs to
+# completion using whatever data is currently in data/raw/.
+
+on:
+  schedule:
+    # First Sunday of Jan/Apr/Jul/Oct, 10:00 UTC.
+    # cron: "min hour day-of-month month day-of-week"
+    # day-of-week 0 = Sunday. day-of-month 1-7 forces the first week.
+    - cron: "0 10 1-7 1,4,7,10 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run pipeline
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+        run: |
+          python3 scripts/run_all.py
+
+      - name: Commit and push if anything changed
+        run: |
+          set -euo pipefail
+          git config user.name "adri-refresh-bot"
+          git config user.email "adri-refresh-bot@users.noreply.github.com"
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add -A
+          # Use $(date -u) so the commit message reflects the run time.
+          git commit -m "Quarterly refresh: $(date -u +'%Y-%m-%d')"
+          git push origin main
