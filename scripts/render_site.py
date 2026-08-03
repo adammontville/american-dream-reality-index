@@ -112,7 +112,13 @@ def markdown_to_html(md: str) -> str:
         if m:
             flush_para()
             level = len(m.group(1))
-            out.append(f"<h{level}>{_inline(m.group(2))}</h{level}>")
+            text = m.group(2)
+            # Slug for anchor links: lowercase, keep alnum, dashes, and dots;
+            # collapse other chars to a dash; trim leading/trailing dashes.
+            slug = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+            out.append(
+                f'<h{level} id="{slug}">{_inline(text)}</h{level}>'
+            )
             i += 1
             continue
 

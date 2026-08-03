@@ -1,8 +1,8 @@
 # American Dream Reality Index — Methodology
 
-**Version:** 0.1.2
-**Status:** Design finalized; pipeline and static site implemented.
-**Last updated:** 2026-08-02
+**Version:** 1.0.0
+**Status:** First stable release. Indicator set, weights, anchors, publication threshold, and output schema are now considered the public API of the ADRI.
+**Last updated:** 2026-08-03
 
 ---
 
@@ -17,6 +17,22 @@ The ADRI tracks *enabling conditions*, not outcomes for any individual and not a
 - **It is a model, not a probability.** A higher ADRI does not mean any specific person is more likely to succeed; it means the structural terrain is, on the chosen measures, more favorable.
 
 The ADRI is deliberately **slow-moving** and **backward-looking**. Most inputs update annually; a few update biennially or quarterly. Fast-moving events belong in other products (e.g., the BugOut Index's Current Signals layer), not here.
+
+## 1.1 What we mean by "the American Dream"
+
+The American Dream has never had a single agreed definition. This index adopts a specific one: the structural conditions under which a **median American resident** can reasonably expect material security, basic educational access, health and longevity, political voice, and freedom from a punitive institutional floor. These are the conditions that historically preceded the property-ownership, family-formation, and generational-mobility outcomes most often associated with the phrase "American Dream" in 20th-century framings.
+
+**What autonomy and state coercion look like in the ADRI.** Two of the ten indicators speak directly to the individual's relationship with the state: the **incarceration rate per 100,000**, which is the most direct measurable signal of state physical coercion at a population scale, and **VEP turnout**, which measures political voice. These are partial signals of a concept that deserves broader measurement than the ADRI can support with sound public data alone. A reader who prioritizes autonomy and freedom-from-coercion as central to the American Dream should treat these two indicators as necessary but not sufficient, and read the ADRI alongside more coercion-focused indices such as the [BugOut Index](https://adammontville.github.io/bugout-index/).
+
+**What the ADRI does not measure.** Cultural belonging, subjective flourishing, physical safety at the personal level, environmental quality, community cohesion, or the specific 20th-century markers (single-earner household sufficiency, single-family homeownership at working-class wages, guaranteed upward class mobility across generations). A reader who defines the American Dream around any of these should treat the ADRI as adjacent but incomplete.
+
+**What the ADRI cannot resolve.** Whether these structural conditions are the *right* things to measure. Younger observers, in particular, increasingly define the American Dream in terms of security and autonomy rather than accumulation and ownership — a reframing the ADRI's indicator set partially reflects (through incarceration and VEP turnout) but does not fully capture. The ADRI's indicator set was designed to be **generationally neutral on framing but specific on measurement** — it measures the material substrate that most competing definitions still depend on, without endorsing any single cultural definition of what a "good life" looks like on top of that substrate.
+
+## 1.2 The 0–100 scale, in practice
+
+The ADRI is bounded 0–100 by construction, but the endpoints of that range are theoretical, not observed. A score of 100 would require every indicator to simultaneously reach its most-favorable-observed anchor value; a score of 0 would require every indicator to simultaneously reach its worst-observed anchor value. Neither has happened in the observation window, and neither is expected to happen in a mixed economy where indicators trade off against each other.
+
+Across the 2010–2024 observation window, published design-weighted ADRI values have ranged from **34.9 (2012) to 43.9 (2024)**. Real-world scores are expected to continue falling within a narrower band than the full 0–100 range. Readers are encouraged to reason from the observed range rather than from the theoretical endpoints.
 
 ## 2. Design principles
 
@@ -259,6 +275,13 @@ When a primary source revises a prior-year value (e.g., Census re-releases an AC
 
 The ADRI trails reality by 12–24 months. It is a **structural** measure. If you want a real-time picture, this is the wrong instrument.
 
+### 7.3.1 Known indicator-level freshness limitations (as of v1.0.0)
+
+Two indicators currently have known freshness limitations that the maintainer is aware of and evaluating for a future release:
+
+- **Life expectancy at birth (indicator 3).** The FRED-hosted series (`SPDYNLE00INUSA`, sourced from World Bank) currently stops at 2018. CDC NCHS has published final and provisional life-expectancy figures for years beyond 2018, but they are not yet integrated into this pipeline. As a result, ADRI values for reference years 2019 and later use the 2018 life-expectancy value carried forward under the four-year carry-forward rule (§5.2 has a one-year default; life expectancy is not covered by the VEP presidential-cycle exception, and any use beyond one year is a known deviation being carried while the source-swap is evaluated). Switching to a CDC NCHS-direct source is a candidate change for a subsequent release.
+- **Prime-age employment-to-population ratio (indicator 7).** This series is monthly at source. The pipeline currently annualizes whatever months are available, which means that in mid-year the most-recent "annual" value can reflect a partial year. This is by design as of v1.0.0: it makes the index more responsive to labor-market conditions than a strict full-year rule would allow, at the cost of introducing partial-year data into the most-recent point. Readers who prefer full-year values should look at the year prior to the latest for a full-year figure.
+
 ### 7.4 Documented discontinuities per indicator
 
 | Indicator | Discontinuity | Handling |
@@ -296,6 +319,13 @@ If any of these three is missing, the ADRI value cannot be published.
 Full source URLs, access notes, and vintage tracking are maintained in `../data/raw/<indicator>/README.md` (created per-indicator when Thread 2 begins retrieval work). This section is a locator, not a substitute for the source-verification reference in `NOTES.md`.
 
 ## Appendix B — Change log
+
+- **v1.0.0 (2026-08-03)** — MAJOR. First stable release. The indicator set, domain weights, anchor values, publication threshold, and output schema are now considered the **public API** of the ADRI; future changes to these elements will require a major version bump with a documented rationale. This release adds:
+  - A new §1.1 ("What we mean by the American Dream") that names the specific definition of the American Dream this index adopts, acknowledges the concepts it does not measure, and cross-references the BugOut Index as a complementary coercion-focused signal.
+  - A new §1.2 ("The 0–100 scale, in practice") that documents the observable range of the design-weighted composite (34.9–43.9 across 2010–2024) and clarifies that the theoretical endpoints of the 0–100 scale are not expected to be reached in practice.
+  - A new §7.3.1 documenting two known indicator-level freshness limitations (life expectancy stops at 2018 in the current FRED source; prime-age EPOP admits partial-year data in the most-recent point) that are candidates for follow-up work.
+
+  This release also marks the first **fully-authoritative refresh** of the underlying data: all four API-backed indicators (real median household income, prime-age EPOP, bachelor's degree attainment, Gini) now pull directly from FRED and Census APIs rather than the seed CSVs bundled during initial development. As a result, the aggregate ADRI for reference year 2024 moved from **44.16 (v0.1.2 seed values)** to **43.86 (v1.0.0 authoritative values)**. The seed values were bundled to make the pipeline runnable without API credentials during initial development; they are no longer part of the reported series.
 
 - **v0.1.2 (2026-08-02)** — MINOR. Added the VEP presidential-cycle carry-forward exception to §5.2 (up to four reference years for indicator 9 only). Closes the last methodology↔implementation gap flagged in v0.1.1. No score change: the reference implementation already carried VEP forward for four years; this revision only makes the methodology consistent with what the pipeline was already doing.
 - **v0.1.1 (2026-08-02)** — MINOR. Added §5.3.1 formalizing the publication threshold used by the reference implementation (indicator coverage ≥ 6/10 and all six domains represented after carry-forward). Corrected a stale cross-reference in §5.2 (domain aggregation is defined in §5.4, not §5.3). One methodology↔implementation gap remained open at the time of this release: the reference implementation carried the VEP indicator forward for up to four years rather than the one year permitted by §5.2. Resolved in v0.1.2.
