@@ -125,7 +125,7 @@ The repository ships with a **dual-license model** matching the BugOut Index:
 
 Before the repo is made public and before GitHub Pages is enabled:
 
-1. **Enable GitHub Pages** with the `/site/` directory as the publishing source (branch: `main`, folder: `/site`). Confirm the site loads at `https://adammontville.github.io/american-dream-reality-index/` and that `assets/adri_timeseries.json` is fetchable.
+1. **Enable GitHub Pages using the GitHub Actions source.** In Settings → Pages, set **Source** to "GitHub Actions" (not "Deploy from a branch"). The workflow at `.github/workflows/pages.yml` uploads `site/` as the Pages artifact whenever `site/**` changes on `main`. GitHub's branch-and-folder Pages source only accepts `/` or `/docs`, which is why this project uses the Actions path — it lets `site/` stay a separate top-level folder from `docs/`. Confirm the site loads at `https://adammontville.github.io/american-dream-reality-index/` and that `assets/adri_timeseries.json` is fetchable.
 2. **Confirm the ADRI wordmark is unencumbered.** A quick USPTO TESS search for "American Dream Reality Index" plus a general search for prior public use is inexpensive and worth doing before the site has a public URL.
 3. **Change repository visibility to Public** (Settings → General → Change visibility).
 4. **Only after** the site is verified: consider enabling branch protection on `main` and adding Issues templates for methodology feedback.
