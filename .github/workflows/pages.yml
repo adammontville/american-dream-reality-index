@@ -9,6 +9,23 @@ name: Deploy site to GitHub Pages
 #
 # In the repo Settings, set Pages -> Source to "GitHub Actions" (not
 # "Deploy from a branch") once this workflow is on main.
+#
+# Trigger design:
+#
+#   push          - human-authored commits to main touching site/** or this
+#                   workflow itself redeploy automatically.
+#
+#   workflow_run  - after Quarterly refresh finishes successfully, this
+#                   workflow runs against the just-refreshed main. Needed
+#                   because GitHub Actions deliberately does NOT trigger
+#                   downstream `push` workflows for commits made by the
+#                   default GITHUB_TOKEN (see the Actions docs on
+#                   "Triggering a workflow from a workflow"). Without this
+#                   trigger, refresh commits would land on main without a
+#                   corresponding Pages deploy.
+#
+#   workflow_dispatch - lets a maintainer force a redeploy from the Actions
+#                   tab when needed.
 
 on:
   push:
@@ -16,6 +33,10 @@ on:
     paths:
       - 'site/**'
       - '.github/workflows/pages.yml'
+  workflow_run:
+    workflows: ["Quarterly refresh"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -29,6 +50,11 @@ concurrency:
 
 jobs:
   deploy:
+    # Skip the workflow_run trigger's launch when the upstream refresh
+    # failed. For push and workflow_dispatch events, github.event.workflow_run
+    # is null and the expression is true, so this only gates the
+    # workflow_run path.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

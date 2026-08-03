@@ -67,7 +67,7 @@ For each of the five manual indicators, updating the CSV under `data/raw/manual/
 The repo ships two workflows under `.github/workflows/`:
 
 - **[`refresh.yml`](../.github/workflows/refresh.yml)** — runs the full pipeline on a schedule and commits any changes back to `main`. Schedule: **first Sunday of Jan / Apr / Jul / Oct at 10:00 UTC**. Also supports `workflow_dispatch` for manual runs from the Actions tab.
-- **[`pages.yml`](../.github/workflows/pages.yml)** — redeploys the static site to GitHub Pages whenever `site/**` changes on `main`. A refresh that produces new data will automatically trigger a redeploy.
+- **[`pages.yml`](../.github/workflows/pages.yml)** — redeploys the static site to GitHub Pages. Triggers on human-authored pushes to `main` that touch `site/**`, on successful completion of the `refresh.yml` workflow (via `workflow_run`), and on manual dispatch. The `workflow_run` trigger is required because commits pushed by `GITHUB_TOKEN` (which is what `refresh.yml` uses) deliberately do not fire downstream `push` workflows — GitHub's built-in loop-prevention. Without `workflow_run`, quarterly refreshes would land on `main` without a corresponding redeploy.
 
 Setup required before the refresh workflow can fetch live data:
 
