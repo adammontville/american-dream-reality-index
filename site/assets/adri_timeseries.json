@@ -1,6 +1,6 @@
 {
   "methodology_version": "0.1.2",
-  "generated_at": "2026-08-03T12:02:43Z",
+  "generated_at": "2026-10-01T16:47:56Z",
   "notes": "ADRI (American Dream Reality Index) v0.1. See docs/METHODOLOGY.md for indicator definitions, anchors, normalization, and weighting. Confidence is a coarse freshness heuristic; see docs/NOTES.md \u00a76.6.",
   "domain_weights": {
     "Education": 0.2,
@@ -125,13 +125,13 @@
   "series": [
     {
       "year": 2010,
-      "adri": 35.78,
-      "adri_equal_weight": 34.68,
+      "adri": 36.1,
+      "adri_equal_weight": 34.95,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 45.12,
         "Health": 60.11,
-        "Prosperity": 32.46,
+        "Prosperity": 34.07,
         "Opportunity": 20.67,
         "Civic": 46.4,
         "Safety": 3.33
@@ -174,9 +174,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 68420.0,
+          "raw": 70110.0,
           "raw_vintage_year": 2010,
-          "normalized": 38.343,
+          "normalized": 43.171,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -223,13 +223,13 @@
     },
     {
       "year": 2011,
-      "adri": 34.99,
-      "adri_equal_weight": 33.86,
+      "adri": 35.31,
+      "adri_equal_weight": 34.13,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 46.77,
         "Health": 58.66,
-        "Prosperity": 31.33,
+        "Prosperity": 32.91,
         "Opportunity": 16.67,
         "Civic": 46.4,
         "Safety": 3.33
@@ -272,9 +272,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 67410.0,
+          "raw": 69070.0,
           "raw_vintage_year": 2011,
-          "normalized": 35.457,
+          "normalized": 40.2,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -321,13 +321,13 @@
     },
     {
       "year": 2012,
-      "adri": 34.99,
-      "adri_equal_weight": 33.0,
+      "adri": 35.31,
+      "adri_equal_weight": 33.26,
       "confidence": 0.9,
       "domain_scores": {
         "Education": 47.58,
         "Health": 59.32,
-        "Prosperity": 33.31,
+        "Prosperity": 34.9,
         "Opportunity": 16.2,
         "Civic": 34.4,
         "Safety": 7.17
@@ -370,9 +370,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 67400.0,
+          "raw": 69070.0,
           "raw_vintage_year": 2012,
-          "normalized": 35.429,
+          "normalized": 40.2,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -418,13 +418,13 @@
     },
     {
       "year": 2013,
-      "adri": 35.64,
-      "adri_equal_weight": 33.39,
+      "adri": 35.97,
+      "adri_equal_weight": 33.67,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 50.45,
         "Health": 58.19,
-        "Prosperity": 37.55,
+        "Prosperity": 39.19,
         "Opportunity": 12.6,
         "Civic": 34.4,
         "Safety": 7.17
@@ -467,9 +467,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 69950.0,
+          "raw": 71670.0,
           "raw_vintage_year": 2013,
-          "normalized": 42.714,
+          "normalized": 47.629,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -516,13 +516,13 @@
     },
     {
       "year": 2014,
-      "adri": 36.46,
-      "adri_equal_weight": 34.21,
+      "adri": 36.78,
+      "adri_equal_weight": 34.48,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 51.05,
         "Health": 57.24,
-        "Prosperity": 39.5,
+        "Prosperity": 41.12,
         "Opportunity": 13.07,
         "Civic": 34.4,
         "Safety": 10.0
@@ -565,9 +565,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 69060.0,
+          "raw": 70760.0,
           "raw_vintage_year": 2014,
-          "normalized": 40.171,
+          "normalized": 45.029,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -614,13 +614,13 @@
     },
     {
       "year": 2015,
-      "adri": 36.59,
-      "adri_equal_weight": 34.29,
+      "adri": 36.94,
+      "adri_equal_weight": 34.57,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 48.7,
         "Health": 53.66,
-        "Prosperity": 46.76,
+        "Prosperity": 48.47,
         "Opportunity": 12.2,
         "Civic": 34.4,
         "Safety": 10.0
@@ -663,9 +663,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 72790.0,
+          "raw": 74590.0,
           "raw_vintage_year": 2015,
-          "normalized": 50.829,
+          "normalized": 55.971,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -712,13 +712,13 @@
     },
     {
       "year": 2016,
-      "adri": 38.24,
-      "adri_equal_weight": 36.35,
+      "adri": 38.59,
+      "adri_equal_weight": 36.64,
       "confidence": 0.9,
       "domain_scores": {
         "Education": 50.1,
         "Health": 48.02,
-        "Prosperity": 52.84,
+        "Prosperity": 54.6,
         "Opportunity": 11.73,
         "Civic": 40.4,
         "Safety": 15.0
@@ -761,9 +761,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 75380.0,
+          "raw": 77230.0,
           "raw_vintage_year": 2016,
-          "normalized": 58.229,
+          "normalized": 63.514,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -809,13 +809,13 @@
     },
     {
       "year": 2017,
-      "adri": 38.22,
-      "adri_equal_weight": 36.33,
+      "adri": 38.58,
+      "adri_equal_weight": 36.63,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 50.25,
         "Health": 44.45,
-        "Prosperity": 56.02,
+        "Prosperity": 57.82,
         "Opportunity": 11.87,
         "Civic": 40.4,
         "Safety": 15.0
@@ -858,9 +858,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 76710.0,
+          "raw": 78600.0,
           "raw_vintage_year": 2017,
-          "normalized": 62.029,
+          "normalized": 67.429,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -907,13 +907,13 @@
     },
     {
       "year": 2018,
-      "adri": 40.26,
-      "adri_equal_weight": 38.13,
+      "adri": 40.63,
+      "adri_equal_weight": 38.44,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 51.45,
         "Health": 46.56,
-        "Prosperity": 61.23,
+        "Prosperity": 63.05,
         "Opportunity": 10.33,
         "Civic": 40.4,
         "Safety": 18.83
@@ -956,9 +956,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 77700.0,
+          "raw": 79620.0,
           "raw_vintage_year": 2018,
-          "normalized": 64.857,
+          "normalized": 70.343,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -1005,13 +1005,13 @@
     },
     {
       "year": 2019,
-      "adri": 42.6,
-      "adri_equal_weight": 40.26,
+      "adri": 43.0,
+      "adri_equal_weight": 40.59,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 50.58,
         "Health": 45.11,
-        "Prosperity": 72.05,
+        "Prosperity": 74.02,
         "Opportunity": 12.6,
         "Civic": 40.4,
         "Safety": 20.83
@@ -1054,9 +1054,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 83260.0,
+          "raw": 85320.0,
           "raw_vintage_year": 2019,
-          "normalized": 80.743,
+          "normalized": 86.629,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -1103,13 +1103,13 @@
     },
     {
       "year": 2020,
-      "adri": 41.75,
-      "adri_equal_weight": 42.43,
+      "adri": 42.13,
+      "adri_equal_weight": 42.75,
       "confidence": 0.6,
       "domain_scores": {
         "Education": 50.58,
         "Health": 21.61,
-        "Prosperity": 65.41,
+        "Prosperity": 67.32,
         "Opportunity": 12.6,
         "Civic": 66.4,
         "Safety": 38.0
@@ -1145,9 +1145,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 81580.0,
+          "raw": 83590.0,
           "raw_vintage_year": 2020,
-          "normalized": 75.943,
+          "normalized": 81.686,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -1196,13 +1196,13 @@
     },
     {
       "year": 2021,
-      "adri": 41.73,
-      "adri_equal_weight": 42.43,
+      "adri": 42.11,
+      "adri_equal_weight": 42.75,
       "confidence": 0.7,
       "domain_scores": {
         "Education": 54.38,
         "Health": 8.39,
-        "Prosperity": 74.46,
+        "Prosperity": 76.37,
         "Opportunity": 10.13,
         "Civic": 66.4,
         "Safety": 40.83
@@ -1238,9 +1238,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 81270.0,
+          "raw": 83270.0,
           "raw_vintage_year": 2021,
-          "normalized": 75.057,
+          "normalized": 80.771,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -1288,13 +1288,13 @@
     },
     {
       "year": 2022,
-      "adri": 37.73,
-      "adri_equal_weight": 38.82,
+      "adri": 38.11,
+      "adri_equal_weight": 39.13,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 48.28,
         "Health": 7.74,
-        "Prosperity": 66.34,
+        "Prosperity": 68.21,
         "Opportunity": 9.13,
         "Civic": 66.4,
         "Safety": 35.0
@@ -1330,9 +1330,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 79500.0,
+          "raw": 81460.0,
           "raw_vintage_year": 2022,
-          "normalized": 70.0,
+          "normalized": 75.6,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -1379,13 +1379,13 @@
     },
     {
       "year": 2023,
-      "adri": 39.52,
-      "adri_equal_weight": 40.3,
+      "adri": 39.91,
+      "adri_equal_weight": 40.62,
       "confidence": 0.7,
       "domain_scores": {
         "Education": 49.28,
         "Health": 11.94,
-        "Prosperity": 70.21,
+        "Prosperity": 72.16,
         "Opportunity": 11.47,
         "Civic": 66.4,
         "Safety": 32.5
@@ -1421,9 +1421,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 82690.0,
+          "raw": 84730.0,
           "raw_vintage_year": 2023,
-          "normalized": 79.114,
+          "normalized": 84.943,
           "carried_forward": false,
           "carry_forward_years": 0
         },
@@ -1471,13 +1471,13 @@
     },
     {
       "year": 2024,
-      "adri": 43.86,
-      "adri_equal_weight": 43.07,
+      "adri": 44.15,
+      "adri_equal_weight": 43.31,
       "confidence": 0.8,
       "domain_scores": {
         "Education": 49.85,
         "Health": 36.45,
-        "Prosperity": 71.3,
+        "Prosperity": 72.71,
         "Opportunity": 12.73,
         "Civic": 55.6,
         "Safety": 32.5
@@ -1513,9 +1513,9 @@
           "carry_forward_years": 0
         },
         "real_median_household_income": {
-          "raw": 83730.0,
+          "raw": 85210.0,
           "raw_vintage_year": 2024,
-          "normalized": 82.086,
+          "normalized": 86.314,
           "carried_forward": false,
           "carry_forward_years": 0
         },
