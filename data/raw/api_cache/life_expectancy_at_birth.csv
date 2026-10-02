@@ -1,6 +1,6 @@
 # indicator: Life expectancy at birth
 # source: https://data.cdc.gov/api/views/w9j2-ggv5/rows.csv
-# vintage: 2026-10-01 (auto-fetched)
+# vintage: 2026-10-02 (auto-fetched)
 # Socrata dataset w9j2-ggv5, filtered to All Races × Both Sexes. Provisional values may be present; the processing step should prefer the most recent final vintage where the two overlap.
 year,value
 1900,47.3
