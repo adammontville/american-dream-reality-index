@@ -12,7 +12,7 @@
     "source": "U.S. life expectancy at birth dipped to ~76.4 in 2021 and has sat between 76 and 79 since 2000. L=74 anchors below the pandemic trough as a stressed-domestic floor; U=84 anchors near the top-of-OECD ceiling (Japan, Switzerland ~84)."
   },
   "raw_path": "data/raw/api_cache/life_expectancy_at_birth.csv",
-  "vintage_note": "# indicator: Life expectancy at birth\n# source: https://data.cdc.gov/api/views/w9j2-ggv5/rows.csv\n# vintage: 2026-10-02 (auto-fetched)\n# Socrata dataset w9j2-ggv5, filtered to All Races \u00d7 Both Sexes. Provisional values may be present; the processing step should prefer the most recent final vintage where the two overlap.",
+  "vintage_note": "# indicator: Life expectancy at birth\n# source: https://data.cdc.gov/api/views/w9j2-ggv5/rows.csv\n# vintage: 2026-10-03 (auto-fetched)\n# Socrata dataset w9j2-ggv5, filtered to All Races \u00d7 Both Sexes. Provisional values may be present; the processing step should prefer the most recent final vintage where the two overlap.",
   "series": [
     {
       "year": 1900,
