@@ -12,7 +12,7 @@
     "source": "ACS Gini (B19083) has sat between 0.46 and 0.49 nationally in recent years. L=0.35 anchors on a peer-OECD floor (roughly the range of the more equal advanced economies); U=0.50 anchors above the U.S. modern high as a stressed ceiling."
   },
   "raw_path": "data/raw/api_cache/gini_household_income.csv",
-  "vintage_note": "# indicator: Gini index of household income\n# source: https://api.census.gov/data/2024/acs/acs1\n# vintage: 2026-10-03 (auto-fetched)\n# ACS 1-Year B19083_001E (national Gini).",
+  "vintage_note": "# indicator: Gini index of household income\n# source: https://api.census.gov/data/2024/acs/acs1\n# vintage: 2026-10-04 (auto-fetched)\n# ACS 1-Year B19083_001E (national Gini).",
   "series": [
     {
       "year": 2010,

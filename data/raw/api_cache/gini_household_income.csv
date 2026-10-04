@@ -1,6 +1,6 @@
 # indicator: Gini index of household income
 # source: https://api.census.gov/data/2024/acs/acs1
-# vintage: 2026-10-03 (auto-fetched)
+# vintage: 2026-10-04 (auto-fetched)
 # ACS 1-Year B19083_001E (national Gini).
 year,value
 2010,0.469
