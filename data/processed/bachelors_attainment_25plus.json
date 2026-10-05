@@ -12,7 +12,7 @@
     "source": "U.S. adult bachelor's attainment was ~20% in the late 1980s and reached ~37\u201338% by 2024. L=20 anchors on the domestic historical low of the modern series; U=45 anchors above current U.S. levels at a plausible OECD-leader ceiling (e.g., Canada, Korea, Ireland for tertiary attainment adjusted for definitional differences)."
   },
   "raw_path": "data/raw/api_cache/bachelors_attainment_25plus.csv",
-  "vintage_note": "# indicator: Bachelor's degree attainment, age 25+\n# source: https://api.census.gov/data/2024/acs/acs1/subject\n# vintage: 2026-10-04 (auto-fetched)\n# ACS 1-Year S1501_C02_015E (percent bachelor's or higher, 25+).",
+  "vintage_note": "# indicator: Bachelor's degree attainment, age 25+\n# source: https://api.census.gov/data/2024/acs/acs1/subject\n# vintage: 2026-10-05 (auto-fetched)\n# ACS 1-Year S1501_C02_015E (percent bachelor's or higher, 25+).",
   "series": [
     {
       "year": 2010,
