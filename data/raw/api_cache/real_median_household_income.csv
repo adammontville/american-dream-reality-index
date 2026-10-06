@@ -1,6 +1,6 @@
 # indicator: Real median household income
 # source: https://fred.stlouisfed.org/series/MEHOINUSA672N
-# vintage: 2026-10-05 (auto-fetched)
+# vintage: 2026-10-06 (auto-fetched)
 # FRED series MEHOINUSA672N, one obs per year. Values in real dollars per FRED metadata.
 year,value
 1984,61910.0

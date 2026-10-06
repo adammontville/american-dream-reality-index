@@ -12,7 +12,7 @@
     "source": "Real median household income (FRED MEHOINUSA672N, 2024 CPI-U-RS dollars) ranged ~$56k in 1994 to ~$83.7k in 2024. L=55000 anchors below the modern-series floor; U=90000 anchors above the 2024 high as a plausible near-term ceiling."
   },
   "raw_path": "data/raw/api_cache/real_median_household_income.csv",
-  "vintage_note": "# indicator: Real median household income\n# source: https://fred.stlouisfed.org/series/MEHOINUSA672N\n# vintage: 2026-10-05 (auto-fetched)\n# FRED series MEHOINUSA672N, one obs per year. Values in real dollars per FRED metadata.",
+  "vintage_note": "# indicator: Real median household income\n# source: https://fred.stlouisfed.org/series/MEHOINUSA672N\n# vintage: 2026-10-06 (auto-fetched)\n# FRED series MEHOINUSA672N, one obs per year. Values in real dollars per FRED metadata.",
   "series": [
     {
       "year": 1984,
