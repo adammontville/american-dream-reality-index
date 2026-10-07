@@ -1,6 +1,6 @@
 # indicator: Bachelor's degree attainment, age 25+
 # source: https://api.census.gov/data/2024/acs/acs1/subject
-# vintage: 2026-10-06 (auto-fetched)
+# vintage: 2026-10-07 (auto-fetched)
 # ACS 1-Year S1501_C02_015E (percent bachelor's or higher, 25+).
 year,value
 2010,28.5

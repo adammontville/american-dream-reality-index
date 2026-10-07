@@ -12,7 +12,7 @@
     "source": "Prime-age EPOP (FRED LNS12300060, annual mean of monthly SA values) has ranged ~74.8 in 2010 to ~80.9 in 2000 and ~80.9 in 2024. L=70 anchors below any modern-series reading; U=82 anchors above historical peaks as a strong-labor-utilization ceiling."
   },
   "raw_path": "data/raw/api_cache/prime_age_epop.csv",
-  "vintage_note": "# indicator: Prime-age (25\u201354) employment-to-population ratio\n# source: https://fred.stlouisfed.org/series/LNS12300060\n# vintage: 2026-10-06 (auto-fetched)\n# FRED series LNS12300060 (monthly SA); annualized by arithmetic mean of monthly values per METHODOLOGY.md \u00a75.3.",
+  "vintage_note": "# indicator: Prime-age (25\u201354) employment-to-population ratio\n# source: https://fred.stlouisfed.org/series/LNS12300060\n# vintage: 2026-10-07 (auto-fetched)\n# FRED series LNS12300060 (monthly SA); annualized by arithmetic mean of monthly values per METHODOLOGY.md \u00a75.3.",
   "series": [
     {
       "year": 1948,
